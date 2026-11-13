@@ -110,7 +110,7 @@ export async function POST(request: Request) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: process.env.CONTACT_FROM_EMAIL ?? "Motion 8 Website <noreply@motion8agency.co>",
+        from: process.env.CONTACT_FROM_EMAIL ?? "Motion 8 Website <noreply@mail.motion8agency.co>",
         to: [to],
         reply_to: email,
         subject: `New project enquiry — ${name}${company ? ` (${company})` : ""}`,
