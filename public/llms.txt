@@ -5,7 +5,7 @@
 ## About
 Motion 8 Agency builds the software, AI systems, and marketing engines that funded startups need to scale. Instead of juggling a dev shop, an AI consultancy, and a marketing agency, Motion 8 provides one accountable team with shared context on product, systems, and demand.
 
-- Website: https://motion8agency.co
+- Website: https://www.motion8agency.co
 - Email: hello@motion8agency.co
 - Locations: India · USA · UAE
 - Founded: 2024
@@ -13,43 +13,43 @@ Motion 8 Agency builds the software, AI systems, and marketing engines that fund
 
 ## Core Pillars & Services
 
-### 1. Digital Marketing (https://motion8agency.co/digital-marketing)
-- Performance Marketing: Paid media across Google, Meta, and LinkedIn tied to pipeline (https://motion8agency.co/digital-marketing/performance-marketing)
-- Technical SEO & Content Strategy: Organic search visibility converting to qualified pipeline (https://motion8agency.co/digital-marketing/seo-content-strategy)
-- Answer Engine Optimization (AEO): Win featured snippets, voice search, and People Also Ask placements (https://motion8agency.co/digital-marketing/aeo-answer-engine-optimization)
-- Generative Engine Optimization (GEO): Visibility and citations inside ChatGPT, Claude, and Perplexity (https://motion8agency.co/digital-marketing/geo-generative-engine-optimization)
-- Marketing Automation & Lifecycle Email: Lead nurturing and automated retention workflows (https://motion8agency.co/digital-marketing/marketing-automation-email)
-- Conversion Rate Optimization (CRO): Funnel and landing page experimentation (https://motion8agency.co/digital-marketing/conversion-rate-optimization)
-- Advanced Analytics & BI: Unified dashboards linking pipeline and spend (https://motion8agency.co/digital-marketing/advanced-analytics)
-- Social Media Management: Strategic brand presence and distribution (https://motion8agency.co/digital-marketing/social-media-management)
-- Public Relations (PR): Narrative building and earned media (https://motion8agency.co/digital-marketing/public-relations)
-- Brand & Positioning: Identity, messaging, and market narrative (https://motion8agency.co/digital-marketing/brand-positioning)
+### 1. Digital Marketing (https://www.motion8agency.co/digital-marketing)
+- Performance Marketing: Paid media across Google, Meta, and LinkedIn tied to pipeline (https://www.motion8agency.co/digital-marketing/performance-marketing)
+- Technical SEO & Content Strategy: Organic search visibility converting to qualified pipeline (https://www.motion8agency.co/digital-marketing/seo-content-strategy)
+- Answer Engine Optimization (AEO): Win featured snippets, voice search, and People Also Ask placements (https://www.motion8agency.co/digital-marketing/aeo-answer-engine-optimization)
+- Generative Engine Optimization (GEO): Visibility and citations inside ChatGPT, Claude, and Perplexity (https://www.motion8agency.co/digital-marketing/geo-generative-engine-optimization)
+- Marketing Automation & Lifecycle Email: Lead nurturing and automated retention workflows (https://www.motion8agency.co/digital-marketing/marketing-automation-email)
+- Conversion Rate Optimization (CRO): Funnel and landing page experimentation (https://www.motion8agency.co/digital-marketing/conversion-rate-optimization)
+- Advanced Analytics & BI: Unified dashboards linking pipeline and spend (https://www.motion8agency.co/digital-marketing/advanced-analytics)
+- Social Media Management: Strategic brand presence and distribution (https://www.motion8agency.co/digital-marketing/social-media-management)
+- Public Relations (PR): Narrative building and earned media (https://www.motion8agency.co/digital-marketing/public-relations)
+- Brand & Positioning: Identity, messaging, and market narrative (https://www.motion8agency.co/digital-marketing/brand-positioning)
 
-### 2. Software & Blockchain Development (https://motion8agency.co/software-development)
-- Custom Software Development: Production systems engineered to scale (https://motion8agency.co/software-development/custom-software-development)
-- Web & Mobile App Development: React, React Native, Next.js, and iOS/Android applications (https://motion8agency.co/software-development/web-mobile-app-development)
-- MVP & Rapid Prototyping: 6–10 week rapid MVP development for funded startups (https://motion8agency.co/software-development/mvp-rapid-prototyping)
-- Ecommerce Development: Scalable architecture on Shopify Plus, Shopify, WooCommerce, BigCommerce, Magento (https://motion8agency.co/software-development/ecommerce-development)
-- Ecommerce Maintenance: 24/7 store monitoring, security, and performance optimizations (https://motion8agency.co/software-development/ecommerce-maintenance)
-- Custom Plugins & Integrations: Purpose-built plugins and ERP/CRM connections (https://motion8agency.co/software-development/custom-plugins-app-development)
-- UI/UX Product Design: User journeys and conversion-focused interfaces (https://motion8agency.co/software-development/ui-ux-design)
-- DevOps & Cloud Architecture: CI/CD, AWS, GCP, Azure infrastructure (https://motion8agency.co/software-development/devops-cloud-services)
-- Blockchain & Smart Contracts: Audited EVM smart contracts, tokenomics, and protocols (https://motion8agency.co/software-development/blockchain-smart-contracts)
-- Web3 Development: DApps, wallets, and decentralized systems (https://motion8agency.co/software-development/web3-development)
-- Dedicated Engineering Teams: Staff augmentation and dedicated pods (https://motion8agency.co/software-development/dedicated-teams)
+### 2. Software & Blockchain Development (https://www.motion8agency.co/software-development)
+- Custom Software Development: Production systems engineered to scale (https://www.motion8agency.co/software-development/custom-software-development)
+- Web & Mobile App Development: React, React Native, Next.js, and iOS/Android applications (https://www.motion8agency.co/software-development/web-mobile-app-development)
+- MVP & Rapid Prototyping: 6–10 week rapid MVP development for funded startups (https://www.motion8agency.co/software-development/mvp-rapid-prototyping)
+- Ecommerce Development: Scalable architecture on Shopify Plus, Shopify, WooCommerce, BigCommerce, Magento (https://www.motion8agency.co/software-development/ecommerce-development)
+- Ecommerce Maintenance: 24/7 store monitoring, security, and performance optimizations (https://www.motion8agency.co/software-development/ecommerce-maintenance)
+- Custom Plugins & Integrations: Purpose-built plugins and ERP/CRM connections (https://www.motion8agency.co/software-development/custom-plugins-app-development)
+- UI/UX Product Design: User journeys and conversion-focused interfaces (https://www.motion8agency.co/software-development/ui-ux-design)
+- DevOps & Cloud Architecture: CI/CD, AWS, GCP, Azure infrastructure (https://www.motion8agency.co/software-development/devops-cloud-services)
+- Blockchain & Smart Contracts: Audited EVM smart contracts, tokenomics, and protocols (https://www.motion8agency.co/software-development/blockchain-smart-contracts)
+- Web3 Development: DApps, wallets, and decentralized systems (https://www.motion8agency.co/software-development/web3-development)
+- Dedicated Engineering Teams: Staff augmentation and dedicated pods (https://www.motion8agency.co/software-development/dedicated-teams)
 
-### 3. AI & Automation (https://motion8agency.co/ai-automation)
-- Custom AI Agents & Chatbots: Proprietary AI agents trained on company knowledge (https://motion8agency.co/ai-automation/ai-agents-chatbots)
-- Workflow Automation: Eliminating manual operations across tools and databases (https://motion8agency.co/ai-automation/workflow-automation)
-- AI Integration for Existing Products: Layering LLM and model capabilities into live products (https://motion8agency.co/ai-automation/ai-integration)
-- LLM Fine-Tuning & RAG: Domain-adapted models with vector database retrieval (https://motion8agency.co/ai-automation/llm-fine-tuning-rag)
-- Predictive Analytics & ML: Custom machine learning forecasting and scoring (https://motion8agency.co/ai-automation/predictive-analytics-ml)
-- Computer Vision & Generative AI: Custom multimodal and image generation pipelines (https://motion8agency.co/ai-automation/computer-vision-generative-ai)
+### 3. AI & Automation (https://www.motion8agency.co/ai-automation)
+- Custom AI Agents & Chatbots: Proprietary AI agents trained on company knowledge (https://www.motion8agency.co/ai-automation/ai-agents-chatbots)
+- Workflow Automation: Eliminating manual operations across tools and databases (https://www.motion8agency.co/ai-automation/workflow-automation)
+- AI Integration for Existing Products: Layering LLM and model capabilities into live products (https://www.motion8agency.co/ai-automation/ai-integration)
+- LLM Fine-Tuning & RAG: Domain-adapted models with vector database retrieval (https://www.motion8agency.co/ai-automation/llm-fine-tuning-rag)
+- Predictive Analytics & ML: Custom machine learning forecasting and scoring (https://www.motion8agency.co/ai-automation/predictive-analytics-ml)
+- Computer Vision & Generative AI: Custom multimodal and image generation pipelines (https://www.motion8agency.co/ai-automation/computer-vision-generative-ai)
 
 ## Packages & Turnkey Solutions
 
 ### Digital Launch Bundle for Local Businesses ($399 Flat)
-- URL: https://motion8agency.co/local-business-website-bundle
+- URL: https://www.motion8agency.co/local-business-website-bundle
 - Pricing: $399 one-time flat investment (zero recurring hosting or maintenance fees)
 - Target Audience: Local businesses, trades, professional services, restaurants, and medical practices in the United States and globally.
 - Deliverables:
@@ -62,6 +62,6 @@ Motion 8 Agency builds the software, AI systems, and marketing engines that fund
   7. 7–14 business day turnkey delivery with dedicated in-house engineering team
 
 ## Case Studies & Work
-- Case Studies: https://motion8agency.co/case-studies
-- Our Work: https://motion8agency.co/our-work
-- Insights & Blog: https://motion8agency.co/blog
+- Case Studies: https://www.motion8agency.co/case-studies
+- Our Work: https://www.motion8agency.co/our-work
+- Insights & Blog: https://www.motion8agency.co/blog

@@ -5,6 +5,8 @@ export const metadata = buildMetadata({
   title: "Careers | Motion 8 Agency",
   description: "Open roles across engineering, design, marketing and AI at Motion 8.",
   path: "/careers",
+  // Stub until real roles are posted — keep it out of the index.
+  noindex: true,
 });
 
 export default function CareersPage() {

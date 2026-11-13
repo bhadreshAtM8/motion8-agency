@@ -3,7 +3,7 @@ import { PILLARS, TOTAL_PILLARS, TOTAL_SERVICES } from "./pillars";
 const siteUrl = (
   process.env.BASE_URL ||
   process.env.NEXT_PUBLIC_BASE_URL ||
-  "https://motion8agency.co"
+  "https://www.motion8agency.co"
 ).replace(/\/$/, "");
 
 export const SITE = {

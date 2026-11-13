@@ -200,13 +200,6 @@ const productSchema = {
       returnFees: "https://schema.org/FreeReturn",
     },
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "47",
-    bestRating: "5",
-    worstRating: "1",
-  },
   category: "Web Design & Development Services",
 };
 
@@ -321,24 +314,9 @@ const localBusinessSchema = {
   priceRange: "$399",
   currenciesAccepted: "USD",
   paymentAccepted: "Credit Card, Debit Card, Stripe, Bank Transfer",
-  hasMap: "https://maps.google.com/?q=Florida,USA",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "47",
-    bestRating: "5",
-    worstRating: "1",
-  },
-  address: {
-    "@type": "PostalAddress",
-    addressRegion: "FL",
-    addressCountry: "US",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: "27.6648",
-    longitude: "-81.5158",
-  },
+  /* No aggregateRating / geo / hasMap / address: Google requires ratings to be
+     visible, third-party reviews and a real verifiable location. Add them back
+     only when both exist on this page. */
   areaServed: [
     { "@type": "Country", name: "United States" },
     { "@type": "State", name: "Florida" },

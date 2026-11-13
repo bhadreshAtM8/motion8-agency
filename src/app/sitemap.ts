@@ -43,7 +43,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/blog", 0.7, "weekly"),
     ...postPages,
     entry("/about", 0.7),
-    entry("/careers", 0.6),
     entry("/contact", 0.8),
     /* Landing pages — high-priority ad destinations */
     entry("/local-business-website-bundle", 0.9, "weekly"),

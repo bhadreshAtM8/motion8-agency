@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { trackLead } from "@/lib/track";
 
 type FormStatus = "idle" | "sending" | "sent" | "error";
 
@@ -45,6 +46,7 @@ export function BundleContactForm() {
         return;
       }
 
+      if (!data.spam) trackLead("local_business_bundle", { value: 399, currency: "USD" });
       setStatus("sent");
       form.reset();
     } catch {

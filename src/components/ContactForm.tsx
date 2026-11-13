@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { MagneticButton } from "@/components/MagneticButton";
 import { gsap, useGSAP, prefersReducedMotion } from "@/lib/gsap";
+import { trackLead } from "@/lib/track";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -86,6 +87,7 @@ export function ContactForm() {
         return;
       }
 
+      if (!result.spam) trackLead("contact", { budget: typeof data.budget === "string" ? data.budget : undefined });
       setStatus("sent");
       root.current?.reset();
     } catch {
