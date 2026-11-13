@@ -1,10 +1,14 @@
 import { PILLARS, TOTAL_PILLARS, TOTAL_SERVICES } from "./pillars";
 
+/* Production serves www (the apex 308-redirects to it), so canonicals must use
+   www. Normalise the apex in case BASE_URL is still set to it in Vercel. */
 const siteUrl = (
   process.env.BASE_URL ||
   process.env.NEXT_PUBLIC_BASE_URL ||
   "https://www.motion8agency.co"
-).replace(/\/$/, "");
+)
+  .replace(/\/$/, "")
+  .replace(/^https?:\/\/motion8agency\.co$/, "https://www.motion8agency.co");
 
 export const SITE = {
   name: "Motion 8 Agency",
