@@ -13,18 +13,40 @@ export function buildMetadata({
   description,
   path,
   noindex = false,
+  image = "/og-image.png",
+  keywords,
 }: {
   title: string;
   description: string;
   path: string;
   noindex?: boolean;
+  image?: string;
+  keywords?: string[];
 }): Metadata {
   const url = absolute(path);
+  const imageUrl = absolute(image);
+  const defaultKeywords = [
+    "Motion 8 Agency",
+    "growth infrastructure",
+    "digital marketing agency",
+    "software development agency",
+    "blockchain development",
+    "AI automation agency",
+    "funded startups",
+    "answer engine optimization",
+    "generative engine optimization",
+    "AEO",
+    "GEO",
+    "technical SEO",
+  ];
+
   return {
+    metadataBase: new URL(SITE.url),
     /* Absolute: these titles already carry the brand, so the layout's
        "%s | Motion 8 Agency" template must not append it again. */
     title: { absolute: title },
     description,
+    keywords: keywords ?? defaultKeywords,
     alternates: { canonical: url },
     robots: noindex
       ? { index: false, follow: true }
@@ -43,15 +65,26 @@ export function buildMetadata({
       type: "website",
       url,
       siteName: SITE.name,
+      locale: "en_US",
       title,
       description,
-      images: [{ url: "/og-image.png", width: 1200, height: 630, alt: SITE.name }],
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: `${title} | ${SITE.name}`,
+          type: "image/png",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: ["/og-image.png"],
+      images: [imageUrl],
+      creator: "@motion8agency",
+      site: "@motion8agency",
     },
   };
 }
@@ -63,21 +96,38 @@ export const organizationSchema = (): Json => ({
   "@type": "Organization",
   "@id": `${SITE.url}/#organization`,
   name: SITE.name,
+  legalName: SITE.name,
   url: SITE.url,
   email: SITE.email,
   description: SITE.description,
   foundingDate: SITE.founded,
-  logo: { "@type": "ImageObject", url: absolute("/brand/icon.png") },
+  logo: {
+    "@type": "ImageObject",
+    url: absolute("/brand/icon.png"),
+    caption: `${SITE.name} Logo`,
+  },
+  image: absolute("/og-image.png"),
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      email: SITE.email,
+      contactType: "customer service",
+      availableLanguage: ["English"],
+    },
+  ],
   areaServed: SITE.areaServed,
   knowsAbout: [
+    "Growth infrastructure",
     "Digital marketing",
-    "Search engine optimization",
-    "Answer engine optimization",
-    "Generative engine optimization",
+    "Search engine optimization (SEO)",
+    "Answer engine optimization (AEO)",
+    "Generative engine optimization (GEO)",
+    "Conversion rate optimization (CRO)",
     "Custom software development",
-    "Blockchain development",
-    "Artificial intelligence",
-    "Workflow automation",
+    "Blockchain & smart contracts",
+    "Web3 development",
+    "Artificial intelligence & LLMs",
+    "AI agents & workflow automation",
   ],
   sameAs: [],
 });

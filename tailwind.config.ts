@@ -37,6 +37,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-manrope)", "Segoe UI", "Helvetica", "Arial", "sans-serif"],
+        mono: ["var(--font-mono)", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"],
       },
       borderRadius: {
         card: "14px",
@@ -54,10 +55,25 @@ const config: Config = {
       keyframes: {
         ring: { to: { transform: "rotate(360deg)" } },
         ringReverse: { to: { transform: "rotate(-360deg)" } },
+        "star-movement-bottom": {
+          "0%": { transform: "translate(0%, 0%)", opacity: "1" },
+          "100%": { transform: "translate(-100%, 0%)", opacity: "0" },
+        },
+        "star-movement-top": {
+          "0%": { transform: "translate(0%, 0%)", opacity: "1" },
+          "100%": { transform: "translate(100%, 0%)", opacity: "0" },
+        },
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         ring: "ring 30s linear infinite",
         ringReverse: "ringReverse 22s linear infinite",
+        "star-movement-bottom": "star-movement-bottom linear infinite alternate",
+        "star-movement-top": "star-movement-top linear infinite alternate",
+        marquee: "marquee 25s linear infinite",
       },
     },
   },

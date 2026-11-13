@@ -9,6 +9,8 @@ type Payload = {
   company?: string;
   budget?: string;
   message?: string;
+  socialOrWebsite?: string;
+  handle?: string;
   /** Honeypot — real people leave this empty. */
   website?: string;
 };
@@ -58,11 +60,12 @@ export async function POST(request: Request) {
   const message = body.message?.trim() ?? "";
   const company = body.company?.trim() ?? "";
   const budget = body.budget?.trim() ?? "";
+  const socialOrWebsite = (body.socialOrWebsite ?? body.handle)?.trim() ?? "";
 
   const errors: Record<string, string> = {};
   if (name.length < 2) errors.name = "Tell us your name.";
   if (!EMAIL.test(email)) errors.email = "That email doesn't look right.";
-  if (message.length < 10) errors.message = "A sentence or two about the project, please.";
+  if (message.length < 5) errors.message = "Please share what's the goal or what you need help with.";
   if (message.length > 5000) errors.message = "That's longer than we can accept.";
 
   if (Object.keys(errors).length) {
@@ -79,6 +82,7 @@ export async function POST(request: Request) {
       name,
       email,
       company,
+      socialOrWebsite,
       budget,
     });
     return NextResponse.json({ ok: true, delivered: false });
@@ -87,8 +91,9 @@ export async function POST(request: Request) {
   const text = [
     `Name: ${name}`,
     `Email: ${email}`,
-    company && `Company: ${company}`,
-    budget && `Budget: ${budget}`,
+    company && `Company / Business: ${company}`,
+    socialOrWebsite && `Instagram / Website: ${socialOrWebsite}`,
+    budget && `Budget / Package: ${budget}`,
     "",
     message,
   ]

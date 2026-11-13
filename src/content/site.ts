@@ -1,9 +1,15 @@
 import { PILLARS, TOTAL_PILLARS, TOTAL_SERVICES } from "./pillars";
 
+const siteUrl = (
+  process.env.BASE_URL ||
+  process.env.NEXT_PUBLIC_BASE_URL ||
+  "https://motion8agency.co"
+).replace(/\/$/, "");
+
 export const SITE = {
   name: "Motion 8 Agency",
   shortName: "Motion 8",
-  url: "https://motion8agency.co",
+  url: siteUrl,
   email: "hello@motion8agency.co",
   founded: "2024",
   offices: "India · USA · UAE",

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Motion 8 Agency — sitemap.xml
+  Domain assumed as motion8agency.co (from your account email). Flag if the live domain differs.
+
+  Full slug inventory — 48 pages total, matching every indexable artboard built on the mockup canvas:
+  home, 3 pillar hubs, 32 sub-service/platform-expert pages (AEO and GEO split from the old
+  combined AEO/GEO/LLM page), the blog hub + 3 articles, and the 9 supporting pages
+  (our-work, case-studies, about, careers, contact, privacy, terms, 404 is excluded — not indexable).
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://motion8agency.co/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Pillar hubs -->
+  <url>
+    <loc>https://motion8agency.co/digital-marketing/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://motion8agency.co/software-blockchain-dev/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://motion8agency.co/ai-automation/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Digital Marketing — 9 sub-service pages -->
+  <url><loc>https://motion8agency.co/digital-marketing/performance-marketing/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/digital-marketing/seo-content-strategy/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/digital-marketing/marketing-automation-email/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/digital-marketing/conversion-rate-optimization/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/digital-marketing/social-media-management/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/digital-marketing/aeo-optimization/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/digital-marketing/geo-optimization/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/digital-marketing/advanced-analytics/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/digital-marketing/public-relations/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/digital-marketing/brand-positioning/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Software & Blockchain Dev — 11 sub-service pages -->
+  <url><loc>https://motion8agency.co/software-blockchain-dev/mvp-rapid-prototyping/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/software-blockchain-dev/ecommerce-development/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/software-blockchain-dev/custom-software-development/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/software-blockchain-dev/web-mobile-app-development/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/software-blockchain-dev/blockchain-smart-contracts/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/software-blockchain-dev/web3-development/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/software-blockchain-dev/ui-ux-design/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/software-blockchain-dev/devops-cloud-services/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/software-blockchain-dev/dedicated-teams/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/software-blockchain-dev/ecommerce-maintenance/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/software-blockchain-dev/custom-plugins-app-development/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Ecommerce platform-expert pages — nested under Ecommerce Development -->
+  <url><loc>https://motion8agency.co/software-blockchain-dev/ecommerce-development/shopify-plus/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/software-blockchain-dev/ecommerce-development/shopify/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/software-blockchain-dev/ecommerce-development/wordpress-woocommerce/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/software-blockchain-dev/ecommerce-development/bigcommerce/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/software-blockchain-dev/ecommerce-development/magento/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- AI & Automation — 6 sub-service pages -->
+  <url><loc>https://motion8agency.co/ai-automation/custom-ai-agents-chatbots/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/ai-automation/workflow-automation/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/ai-automation/ai-integration-existing-products/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/ai-automation/llm-fine-tuning-rag/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/ai-automation/predictive-analytics-ml/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://motion8agency.co/ai-automation/computer-vision-generative-ai/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://motion8agency.co/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://motion8agency.co/blog/aeo-vs-geo-vs-seo-funded-startups/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://motion8agency.co/blog/product-led-seo-tactics-startups/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://motion8agency.co/blog/marketing-automation-stack-seed-to-series-b/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+
+  <!-- Supporting pages -->
+  <url>
+    <loc>https://motion8agency.co/our-work/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://motion8agency.co/case-studies/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://motion8agency.co/about/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://motion8agency.co/careers/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://motion8agency.co/contact/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://motion8agency.co/privacy-policy/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://motion8agency.co/terms/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

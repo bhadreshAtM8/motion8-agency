@@ -43,8 +43,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/blog", 0.7, "weekly"),
     ...postPages,
     entry("/about", 0.7),
+    entry("/careers", 0.6),
     entry("/contact", 0.8),
-    /* /careers, /privacy, /terms and /thank-you stay out on purpose: they are
-       noindex until they carry real content. Add them the moment they do. */
+    /* Landing pages — high-priority ad destinations */
+    entry("/local-business-website-bundle", 0.9, "weekly"),
+    /* /privacy, /terms and /thank-you stay out on purpose: they are
+       noindex until they carry final signed counsel wording. */
   ];
 }
