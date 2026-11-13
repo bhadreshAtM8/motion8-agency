@@ -25,7 +25,7 @@ const config: Config = {
         },
         light: {
           body: "#241B14",
-          muted: "#6f6255",
+          muted: "#5c5046", // AA on cream and stone,
         },
         edge: {
           nav: "#362a20",

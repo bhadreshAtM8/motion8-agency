@@ -45,7 +45,7 @@ export default async function CaseStudyPage({ params }: Params) {
       <JsonLd schemas={[breadcrumbSchema(crumbs)]} />
       <Nav solid />
 
-      <main>
+      <main id="main">
         <PageHero
           crumbs={crumbs}
           eyebrow={`${study.pillar} — ${study.industry}`}

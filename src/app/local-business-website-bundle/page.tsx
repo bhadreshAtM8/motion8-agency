@@ -488,7 +488,7 @@ export default function BundlePage() {
         {/* Top Header with Brand and Quick Links */}
         <BundleNav />
 
-        <main className="relative z-10 overflow-hidden pt-24 md:pt-32">
+        <main id="main" className="relative z-10 overflow-hidden pt-24 md:pt-32">
           {/* Ambient Lighting Accents */}
           <div
             aria-hidden

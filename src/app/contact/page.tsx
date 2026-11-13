@@ -24,7 +24,7 @@ export default function ContactPage() {
       <JsonLd schemas={[breadcrumbSchema(crumbs)]} />
       <Nav solid />
 
-      <main>
+      <main id="main">
         <PageHero
           crumbs={crumbs}
           eyebrow="Start a project"

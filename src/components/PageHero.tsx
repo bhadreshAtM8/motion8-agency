@@ -17,6 +17,7 @@ export function PageHero({
   lede,
   primary = { label: "Start a Project", href: "/contact" },
   secondary = { label: "See our work", href: "/our-work" },
+  motif,
 }: {
   crumbs: Crumb[];
   eyebrow: string;
@@ -26,6 +27,8 @@ export function PageHero({
   lede: string;
   primary?: { label: string; href: string };
   secondary?: { label: string; href: string };
+  /** Decorative visual for the right side (md+). Replaces the default ring. */
+  motif?: React.ReactNode;
 }) {
   const root = useRef<HTMLElement>(null);
 
@@ -66,20 +69,35 @@ export function PageHero({
             "radial-gradient(circle at 50% 50%,rgba(228,100,42,.26),rgba(195,72,17,0) 66%)",
         }}
       />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute right-[80px] top-[80px] hidden h-[280px] w-[280px] animate-ring rounded-full border border-[rgba(228,100,42,.28)] xl:block"
-      >
-        <span className="absolute -top-1 left-[calc(50%-4px)] h-2 w-2 rounded-full bg-terracotta-light" />
-      </div>
+      {motif ? (
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-y-0 right-0 hidden w-[46%] md:block"
+        >
+          {motif}
+        </div>
+      ) : (
+        <div
+          aria-hidden
+          className="pointer-events-none absolute right-[80px] top-[80px] hidden h-[280px] w-[280px] animate-ring rounded-full border border-[rgba(228,100,42,.28)] xl:block"
+        >
+          <span className="absolute -top-1 left-[calc(50%-4px)] h-2 w-2 rounded-full bg-terracotta-light" />
+        </div>
+      )}
 
       <div className="gutter relative">
         <nav aria-label="Breadcrumb" className="mb-10 text-[12.5px] text-dark-faint">
           {crumbs.map((crumb, i) => (
             <span key={crumb.path}>
-              {i > 0 && <span className="px-1.5">›</span>}
+              {i > 0 && (
+                <span aria-hidden className="px-1.5">
+                  ›
+                </span>
+              )}
               {i === crumbs.length - 1 ? (
-                <span className="text-dark-muted">{crumb.name}</span>
+                <span aria-current="page" className="text-dark-muted">
+                  {crumb.name}
+                </span>
               ) : (
                 <Link
                   href={crumb.path}

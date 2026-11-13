@@ -37,7 +37,7 @@ export default function CaseStudiesPage() {
       <JsonLd schemas={[breadcrumbSchema(crumbs), list]} />
       <Nav solid />
 
-      <main>
+      <main id="main">
         <PageHero
           crumbs={crumbs}
           eyebrow="Case studies"

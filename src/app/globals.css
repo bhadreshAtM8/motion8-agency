@@ -79,6 +79,13 @@ html.reduced-motion .js-anim {
   visibility: visible !important;
 }
 
+/* FAQ answers collapse with CSS only; without JS nothing can open them, so
+   they all stay expanded. */
+html.no-js [data-faq-body] {
+  grid-template-rows: 1fr !important;
+  visibility: visible !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

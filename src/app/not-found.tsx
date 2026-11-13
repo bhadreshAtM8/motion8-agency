@@ -8,7 +8,7 @@ export default function NotFound() {
   return (
     <>
       <Nav solid />
-      <main className="gutter flex min-h-[70vh] flex-col justify-center bg-ground py-24">
+      <main id="main" className="gutter flex min-h-[70vh] flex-col justify-center bg-ground py-24">
         <div className="text-[11.5px] font-extrabold uppercase tracking-[.16em] text-terracotta-light">
           404
         </div>

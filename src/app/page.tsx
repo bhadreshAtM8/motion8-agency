@@ -30,7 +30,7 @@ export default function HomePage() {
       <Loader />
       <Nav />
 
-      <main>
+      <main id="main">
         <Hero />
         <Ticker />
         <PillarStrip />

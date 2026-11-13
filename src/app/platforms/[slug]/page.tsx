@@ -77,7 +77,7 @@ export default async function PlatformPage({ params }: Params) {
 
       <Nav solid />
 
-      <main>
+      <main id="main">
         <PageHero
           crumbs={crumbs}
           eyebrow={`Platform expertise — ${platform.name}`}

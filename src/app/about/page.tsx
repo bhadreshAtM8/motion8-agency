@@ -27,7 +27,7 @@ export default function AboutPage() {
       <JsonLd schemas={[breadcrumbSchema(crumbs), organizationSchema()]} />
       <Nav solid />
 
-      <main>
+      <main id="main">
         <PageHero
           crumbs={crumbs}
           eyebrow={`Founded ${SITE.founded} — ${SITE.offices}`}

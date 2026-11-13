@@ -26,13 +26,20 @@ export function SmoothScroll() {
       const anchor = (event.target as HTMLElement | null)?.closest?.(
         'a[href^="#"]',
       ) as HTMLAnchorElement | null;
-      if (!anchor) return;
+      // The skip link has to move focus, so it keeps the native jump.
+      if (!anchor || anchor.hasAttribute("data-skip-link")) return;
       const id = anchor.getAttribute("href");
       if (!id || id === "#") return;
       const target = document.querySelector(id);
       if (!target) return;
       event.preventDefault();
-      lenis.scrollTo(target as HTMLElement, { offset: -80, duration: 1.2 });
+      // Lenis already honours the target's scroll-margin-top; links into
+      // sections that set one opt out of the fixed-nav offset.
+      const custom = Number.parseFloat(anchor.dataset.scrollOffset ?? "");
+      lenis.scrollTo(target as HTMLElement, {
+        offset: Number.isFinite(custom) ? custom : -80,
+        duration: 1.2,
+      });
     };
 
     document.addEventListener("click", onAnchorClick);

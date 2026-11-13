@@ -25,7 +25,7 @@ export function StubPage({
   return (
     <>
       <Nav solid />
-      <main>
+      <main id="main">
         <PageHero
           crumbs={crumbs}
           eyebrow={eyebrow}

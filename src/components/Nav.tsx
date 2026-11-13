@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { MagneticButton } from "@/components/MagneticButton";
 import { NAV, SITE } from "@/content/site";
 import { gsap, ScrollTrigger, useGSAP, prefersReducedMotion } from "@/lib/gsap";
@@ -18,6 +18,7 @@ export function Nav({ solid = false }: { solid?: boolean }) {
   const bar = useRef<HTMLElement>(null);
   const menu = useRef<HTMLDivElement>(null);
   const menuTl = useRef<gsap.core.Timeline | null>(null);
+  const toggleRef = useRef<HTMLButtonElement>(null);
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
@@ -87,9 +88,8 @@ export function Nav({ solid = false }: { solid?: boolean }) {
     { scope: root },
   );
 
-  const toggle = () => {
+  const setMenu = (next: boolean) => {
     const tl = menuTl.current;
-    const next = !open;
     setOpen(next);
     document.body.style.overflow = next ? "hidden" : "";
     if (!tl) return;
@@ -99,6 +99,20 @@ export function Nav({ solid = false }: { solid?: boolean }) {
       tl.reverse();
     }
   };
+  const toggle = () => setMenu(!open);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+      setMenu(false);
+      toggleRef.current?.focus();
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+    // setMenu only touches refs and state setters.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open]);
 
   return (
     <div ref={root}>
@@ -120,7 +134,7 @@ export function Nav({ solid = false }: { solid?: boolean }) {
             <span className="text-[17.5px] font-extrabold tracking-[-0.02em]">Motion 8</span>
           </Link>
 
-          <nav className="hidden items-center gap-7 lg:flex">
+          <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">
             {NAV.map((link) => {
               const active = pathname === link.href || pathname.startsWith(`${link.href}/`);
               return (
@@ -144,14 +158,20 @@ export function Nav({ solid = false }: { solid?: boolean }) {
           </nav>
 
           <div className="flex items-center gap-3">
-            <MagneticButton href="/contact" variant="navOutline" className="hidden sm:inline-flex">
-              Start a Project
+            <MagneticButton
+              href="/contact"
+              variant="navOutline"
+              className="max-sm:!px-4 max-sm:!py-[9px] max-sm:!text-[12px]"
+            >
+              Start<span className="sr-only sm:not-sr-only"> a Project</span>
             </MagneticButton>
 
             <button
+              ref={toggleRef}
               type="button"
               onClick={toggle}
               aria-expanded={open}
+              aria-controls="mobile-menu"
               aria-label={open ? "Close menu" : "Open menu"}
               className="relative z-10 -mr-1 flex h-11 w-11 flex-col items-center justify-center gap-[5px] lg:hidden"
             >
@@ -179,9 +199,10 @@ export function Nav({ solid = false }: { solid?: boolean }) {
           ancestor re-anchors position:fixed to itself. */}
       <div
         ref={menu}
+        id="mobile-menu"
         className="fixed inset-0 z-[190] hidden flex-col justify-center bg-ground px-6 lg:!hidden"
       >
-        <nav className="flex flex-col gap-1">
+        <nav aria-label="Mobile" className="flex flex-col gap-1">
           {NAV.map((link) => (
             <span key={link.href} className="block overflow-hidden">
               <Link

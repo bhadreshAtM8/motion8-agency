@@ -65,7 +65,7 @@ export default async function PostPage({ params }: Params) {
       />
       <Nav solid />
 
-      <main>
+      <main id="main">
         <PageHero
           crumbs={crumbs}
           eyebrow={`${post.category} — ${post.readingMinutes} min read`}

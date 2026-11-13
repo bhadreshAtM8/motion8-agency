@@ -114,6 +114,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script dangerouslySetInnerHTML={{ __html: BOOT }} />
       </head>
       <body className="bg-ground font-sans text-dark-body">
+        <a
+          href="#main"
+          data-skip-link
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[300] focus:rounded-pill focus:bg-terracotta focus:px-5 focus:py-3 focus:text-[13px] focus:font-bold focus:text-white"
+        >
+          Skip to content
+        </a>
         <SmoothScroll />
         <ScrollProgress />
         {children}

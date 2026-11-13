@@ -49,7 +49,7 @@ export default function BlogPage() {
       <JsonLd schemas={[breadcrumbSchema(crumbs), blog]} />
       <Nav solid />
 
-      <main>
+      <main id="main">
         <PageHero
           crumbs={crumbs}
           eyebrow="Writing"

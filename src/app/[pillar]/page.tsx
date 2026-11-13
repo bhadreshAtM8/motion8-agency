@@ -66,7 +66,7 @@ export default async function PillarPage({ params }: Params) {
 
       <Nav solid />
 
-      <main>
+      <main id="main">
         <PageHero
           crumbs={crumbs}
           eyebrow={`Pillar ${pillar.index} — ${pillar.services.length} services`}
