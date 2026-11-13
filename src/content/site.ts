@@ -16,12 +16,12 @@ export const SITE = {
   url: siteUrl,
   email: "hello@motion8agency.co",
   founded: "2024",
-  offices: "India · USA · UAE",
+  offices: "USA · UAE · India",
   /* ISO codes for Organization schema areaServed */
   areaServed: ["US", "CA", "GB", "AU", "NZ", "IN", "AE"],
   tagline: "Growth infrastructure — every stage, every size",
   description:
-    "Motion 8 builds the software, AI and marketing that moves companies — one accountable team across product, systems and demand, in India, the USA and the UAE.",
+    "Motion 8 builds the software, AI and marketing that moves companies — one accountable team across product, systems and demand, in the USA, the UAE and India.",
 };
 
 export const NAV = [
@@ -40,7 +40,7 @@ export const HERO = {
     [{ text: "AI, and marketing that" }],
     [{ text: "moves", accent: true }, { text: " companies." }],
   ],
-  lede: "One accountable team across product, systems, and demand — operating in India, the USA, and the UAE. No handoffs, no three separate briefs.",
+  lede: "One accountable team across product, systems, and demand — operating across the USA, the UAE, and India. No handoffs, no three separate briefs.",
   primaryCta: { label: "Start a Project", href: "/contact" },
   secondaryCta: { label: "See our work", href: "/our-work" },
 };

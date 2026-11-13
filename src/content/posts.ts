@@ -19,7 +19,7 @@ export const POSTS: Post[] = [
   {
     slug: "aeo-vs-geo-vs-seo",
     title: "AEO vs GEO vs SEO: what actually changes",
-    metaTitle: "AEO vs GEO vs SEO — What Actually Changes | Motion 8",
+    metaTitle: "AEO vs GEO vs SEO — What Actually Changes | Motion 8 Agency",
     metaDescription:
       "AEO, GEO and SEO overlap more than the acronyms suggest. What genuinely changes is the unit of success — a citation, not a ranking — and how you measure it.",
     excerpt:
@@ -100,7 +100,7 @@ export const POSTS: Post[] = [
   {
     slug: "product-led-seo",
     title: "Product-led SEO: when the product is the content",
-    metaTitle: "Product-Led SEO: When the Product Is the Content | Motion 8",
+    metaTitle: "Product-Led SEO: When the Product Is the Content",
     metaDescription:
       "Product-led SEO turns what your product knows into pages worth ranking. How to tell if you have the data — and when it quietly becomes a liability.",
     excerpt:
@@ -178,7 +178,7 @@ export const POSTS: Post[] = [
   {
     slug: "marketing-automation-stack-by-stage",
     title: "The marketing automation stack, by stage",
-    metaTitle: "The Marketing Automation Stack, by Startup Stage | Motion 8",
+    metaTitle: "Marketing Automation Stack by Stage | Motion 8 Agency",
     metaDescription:
       "What to actually run at pre-seed, Series A and Series B — and the expensive mistake of buying the stack you will need in two years before you need it.",
     excerpt:

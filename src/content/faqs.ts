@@ -202,7 +202,7 @@ export const FAQ_SETS: Record<string, Faq[]> = {
     },
     {
       "question": "How much budget do we need before performance marketing makes sense?",
-      "answer": "We typically see meaningful signal starting around $5-10k/month in ad spend, though the right floor depends on your deal size and sales cycle. Below that, spend is often too thin to reach statistical confidence, and we'll tell you honestly if that's where you are."
+      "answer": "Most engagements start somewhere between US$10k and US$150k a month in media spend, with the right level depending on your deal size and sales cycle. Below that, testing cycles take too long to produce signal and you're usually better served by fixing conversion and organic first, and we'll tell you honestly if that's where you are."
     },
     {
       "question": "Do you manage the total ad spend on top of your fee?",
@@ -258,6 +258,10 @@ export const FAQ_SETS: Record<string, Faq[]> = {
     }
   ],
   "digital-marketing/seo-content-strategy": [
+    {
+      "question": "Does SEO still matter now that people use ChatGPT and AI Overviews?",
+      "answer": "Yes, SEO still matters because the same foundations that earn rankings — clean technical structure, crawlable markup, and genuine expertise — are what ChatGPT and Google AI Overviews draw on when they cite sources, so Motion 8 Agency builds SEO as the groundwork for AEO and GEO and measures citation share alongside rankings. AI answers do reduce clicks on some informational queries, which is why commercial pages still need to rank and earn the visit."
+    },
     {
       "question": "What is SEO and why does it matter for a startup?",
       "answer": "SEO is the practice of earning visibility in search results and AI-generated answers without paying per click. It's the channel that keeps working after the ad budget runs out, compounding traffic and credibility instead of resetting to zero every month."
@@ -507,12 +511,12 @@ export const FAQ_SETS: Record<string, Faq[]> = {
   ],
   "digital-marketing/aeo-answer-engine-optimization": [
     {
-      "question": "What is Answer Engine Optimization, exactly?",
-      "answer": "AEO is the practice of structuring content so search engines can extract a single, direct answer from it — the featured snippet at the top of Google, a \"People Also Ask\" expansion, or the reply a voice assistant reads out loud. It's a different goal than ranking well; it's about being chosen as the one answer shown, often without the searcher ever clicking through."
+      "question": "What does an AEO agency do, and how is it different from SEO?",
+      "answer": "An AEO agency structures your content, schema, and entity signals so answer engines like Google's featured snippets, AI Overviews, ChatGPT, and Perplexity quote your page as the answer; Motion 8 Agency treats it as SEO's sibling, where SEO competes for a ranking position and AEO competes to be the cited source. The foundations overlap — clean markup, clear structure, real expertise — so a page that already ranks is usually the easiest candidate to win the answer. SEO targets a position in a ranked list; AEO targets the snippet box, People Also Ask expansion, voice reply or AI answer that sits above or outside that list, so measurement shifts from rank tracking to answer share across assistants."
     },
     {
-      "question": "How is AEO different from regular SEO?",
-      "answer": "Regular SEO optimizes for ranking position on a results page a person scrolls through. AEO optimizes for a specific SERP feature — a snippet box, a PAA expansion, a voice answer — that sits above or outside the normal ranked list. The two reinforce each other: a page that already ranks well is the easiest candidate to also win the answer box."
+      "question": "What is Answer Engine Optimization, exactly?",
+      "answer": "AEO is the practice of structuring content so search engines can extract a single, direct answer from it — the featured snippet at the top of Google, a \"People Also Ask\" expansion, or the reply a voice assistant reads out loud. It's a different goal than ranking well; it's about being chosen as the one answer shown, often without the searcher ever clicking through."
     },
     {
       "question": "How is AEO different from GEO?",
@@ -569,6 +573,10 @@ export const FAQ_SETS: Record<string, Faq[]> = {
   ],
   "digital-marketing/geo-generative-engine-optimization": [
     {
+      "question": "How do you measure whether ChatGPT or Perplexity cites your brand?",
+      "answer": "Motion 8 Agency measures AI citation by running a fixed set of buyer prompts across ChatGPT, Perplexity, Claude, and Google AI Overviews on a schedule, then logging how often your brand is mentioned, cited, or recommended, what it is cited for, and which competitors appear instead. Trends across weeks are meaningful, while any single AI response is not. We report that share of voice monthly alongside referral traffic from AI tools, benchmarked against named competitors."
+    },
+    {
       "question": "What does GEO actually mean, and why does it matter now?",
       "answer": "Generative Engine Optimization is the practice of structuring content and technical signals so generative AI systems like ChatGPT, Claude, Perplexity, and Google AI Overviews can find, understand, and cite your startup directly in the answers they synthesize. As more buyers skip search results and ask an AI instead, a startup that isn't legible to these engines isn't in the conversation, no matter how good its SEO used to be."
     },
@@ -583,10 +591,6 @@ export const FAQ_SETS: Record<string, Faq[]> = {
     {
       "question": "Which AI tools and engines does Motion 8 optimize for?",
       "answer": "We optimize for the major generative engines your buyers actually use, ChatGPT, Claude, Perplexity, Google AI Overviews and Gemini, and Microsoft Copilot. Each engine sources and weighs content a little differently, so our approach is engine-aware rather than one-size-fits-all."
-    },
-    {
-      "question": "How do you actually measure whether it's working?",
-      "answer": "We run structured prompt tests across ChatGPT, Claude, Perplexity, and Google AI Overviews on the queries that matter to your category, then track how often your brand is mentioned, cited, or recommended over time. That sits alongside referral traffic from AI tools and share-of-voice against named competitors, reported in plain, board-ready numbers."
     },
     {
       "question": "What does \"brand-mention tracking\" mean in practice?",
@@ -929,8 +933,8 @@ export const FAQ_SETS: Record<string, Faq[]> = {
   ],
   "software-development/mvp-rapid-prototyping": [
     {
-      "question": "How long does it take to build an MVP for a startup?",
-      "answer": "Most MVPs we build ship in 6–10 weeks, depending on how many core flows are in scope. We scope tightly upfront so we're building the smallest thing that proves your riskiest assumption, not a feature-complete product. Timelines stretch when third-party integrations or compliance requirements are involved, and we flag that at the scoping stage, not after you've paid for two sprints."
+      "question": "How much does MVP development cost, and how long does it take?",
+      "answer": "Most MVPs from Motion 8 Agency ship in 6–10 weeks from a locked scope, and cost depends on how many core flows and integrations are in scope, so we give a fixed-scope quote after a paid discovery sprint instead of a rough range that grows once the build starts. We scope to the smallest thing that proves your riskiest assumption, not a feature-complete product, and timelines stretch when third-party integrations or compliance requirements are involved, which we flag at scoping rather than after you've paid for two sprints. You own the code and IP outright, with admin access to every repository from day one."
     },
     {
       "question": "What's the difference between an MVP and a prototype?",
@@ -1413,6 +1417,10 @@ export const FAQ_SETS: Record<string, Faq[]> = {
   ],
   "software-development/dedicated-teams": [
     {
+      "question": "Should a startup hire one full-stack agency or separate vendors?",
+      "answer": "For most startups one full-stack agency is simpler, because Motion 8 Agency puts product, engineering, design, marketing, and AI under one roof, so a single named lead is accountable for delivery instead of you coordinating separate vendors who each own only their slice of the work. Separate vendors still make sense when you need one deep specialism your team lacks. Our teams work across the USA, the UAE, and India, so overlap with your US, UK, European, or APAC hours is agreed at contract, and every engagement is covered by an NDA and an IP assignment so you own everything built."
+    },
+    {
       "question": "How is the dedicated-team model different from project-based engagements?",
       "answer": "Project-based work is scoped, priced, and delivered against a fixed brief that ends at launch. A dedicated team is ongoing capacity that sits inside your backlog and adapts as your priorities shift — there's no re-scoping every time direction changes."
     },
@@ -1475,6 +1483,10 @@ export const FAQ_SETS: Record<string, Faq[]> = {
   ],
   "ai-automation/ai-agents-chatbots": [
     {
+      "question": "How long does it take to build an AI agent for customer support?",
+      "answer": "A focused customer-support agent built by Motion 8 Agency typically ships in 3–6 weeks, grounded in your historical tickets and knowledge base, while agents that integrate several systems such as your helpdesk, CRM, and order data usually run 6–10 weeks, with the exact timeline scoped before kickoff. We launch on the highest-volume, lowest-risk ticket types first and go live only once the evaluation suite hits the accuracy target agreed during scoping. Every build includes an escalation path to a human with full conversation context."
+    },
+    {
       "question": "What kinds of agents and chatbots does Motion 8 build?",
       "answer": "We build customer-facing support and sales chatbots, internal-ops assistants that sit on top of your tools, and task-specific agents that take actions rather than just answer questions. Each is scoped to a real workflow, not a generic FAQ bot."
     },
@@ -1509,10 +1521,6 @@ export const FAQ_SETS: Record<string, Faq[]> = {
     {
       "question": "How accurate will the agent be on day one?",
       "answer": "We set an accuracy target during scoping and don't go live until the eval suite hits it. Most launches start with a narrower scope of high-confidence use cases, then widen as real conversation data comes in."
-    },
-    {
-      "question": "How long does it take to build and launch?",
-      "answer": "A focused single-use-case agent typically ships in 3–6 weeks. Multi-tool internal-ops agents or agents integrating several systems usually run 6–10 weeks. We scope the exact timeline before kickoff."
     },
     {
       "question": "What does it cost?",
@@ -1661,6 +1669,10 @@ export const FAQ_SETS: Record<string, Faq[]> = {
   ],
   "ai-automation/llm-fine-tuning-rag": [
     {
+      "question": "How much does a RAG chatbot cost, and how long does it take to build?",
+      "answer": "A focused RAG chatbot over a well-defined data source usually ships in 3–5 weeks, extending to 6–10 weeks with fine-tuning, messier sources, or tighter evaluation requirements, and cost depends on data volume and source complexity, so Motion 8 Agency quotes a fixed scope after the discovery workshop rather than from a rate card. A straightforward pipeline over clean documentation costs far less than fine-tuning across messy, multi-source data. Any embeddings or fine-tuned weights we produce are yours, isolated to your own environment and never used to train a shared model."
+    },
+    {
       "question": "Do we need RAG, fine-tuning, or both?",
       "answer": "Most startups start with RAG: it grounds a general-purpose model in your live data without retraining, and it's cheaper and faster to update. Fine-tuning earns its cost when you need a consistent tone, a specialized task format, or behavior that retrieval alone can't teach — and the two combine well when both apply."
     },
@@ -1683,10 +1695,6 @@ export const FAQ_SETS: Record<string, Faq[]> = {
     {
       "question": "How much does this cost, and what drives the price?",
       "answer": "Cost scales with data volume, source complexity, and whether fine-tuning is involved — a straightforward RAG pipeline over clean documentation is far cheaper than fine-tuning across messy, multi-source data. We scope and quote after the discovery workshop, once we've seen your data."
-    },
-    {
-      "question": "How long does a typical build take?",
-      "answer": "A focused RAG pipeline over a well-defined data source usually ships in 3–5 weeks. Add fine-tuning, messier data sources, or tighter evaluation requirements and timelines extend to 6–10 weeks. We give a firm estimate once scoping is done."
     },
     {
       "question": "How do you measure accuracy before launch?",

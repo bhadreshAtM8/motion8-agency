@@ -102,7 +102,7 @@ export const PILLARS: Pillar[] = [
         slug: "performance-marketing",
         name: "Performance Marketing",
         blurb: "Paid search, social and retargeting managed against pipeline, not platform ROAS.",
-        metaTitle: "Performance Marketing Agency | Motion 8",
+        metaTitle: "Performance Marketing Agency | Motion 8 Agency",
         metaDescription:
           "Paid search, paid social and retargeting managed against pipeline and revenue rather than platform ROAS — run by the team that also builds your product.",
         h1: "Spend measured against pipeline, not platform ROAS.",
@@ -135,7 +135,7 @@ export const PILLARS: Pillar[] = [
         slug: "seo-content-strategy",
         name: "SEO & Content Strategy",
         blurb: "Technical fixes, topical authority and content built for the buyer, not the crawler.",
-        metaTitle: "SEO & Content Strategy Services | Motion 8",
+        metaTitle: "SEO & Content Strategy Services | Motion 8 Agency",
         metaDescription:
           "Technical SEO, topical authority and content strategy built for buyers and the engines that cite them — structured so AEO and GEO compound off the same work.",
         h1: "Content that ranks because it is worth citing.",
@@ -168,7 +168,7 @@ export const PILLARS: Pillar[] = [
         slug: "marketing-automation-email",
         name: "Marketing Automation & Email",
         blurb: "Lifecycle flows, scoring and CRM hygiene so leads stop dying in the inbox.",
-        metaTitle: "Marketing Automation & Email Services | Motion 8",
+        metaTitle: "Marketing Automation & Email Services | Motion 8 Agency",
         metaDescription:
           "Lifecycle flows, lead scoring and CRM hygiene built so leads convert instead of going stale — implemented in HubSpot, Klaviyo or your existing stack.",
         h1: "The follow-up that happens whether anyone remembers or not.",
@@ -201,7 +201,7 @@ export const PILLARS: Pillar[] = [
         slug: "conversion-rate-optimization",
         name: "Conversion Rate Optimization",
         blurb: "Research, hypotheses and tests run on the pages that carry real traffic.",
-        metaTitle: "Conversion Rate Optimization (CRO) Services | Motion 8",
+        metaTitle: "CRO Services: Conversion Rate Optimization | Motion 8 Agency",
         metaDescription:
           "Research-led CRO: session analysis, prioritised hypotheses and statistically honest tests run on the pages that actually carry your traffic.",
         h1: "Fix the pages traffic already lands on.",
@@ -234,7 +234,7 @@ export const PILLARS: Pillar[] = [
         slug: "social-media-management",
         name: "Social Media Management",
         blurb: "Editorial, production and community handled as a channel, not a chore.",
-        metaTitle: "Social Media Management Services | Motion 8",
+        metaTitle: "Social Media Management Services | Motion 8 Agency",
         metaDescription:
           "Editorial planning, production and community management run as a demand channel with real measurement — not a posting schedule someone fills in on Fridays.",
         h1: "A channel with a strategy, not a posting calendar.",
@@ -268,7 +268,7 @@ export const PILLARS: Pillar[] = [
         name: "AEO — Answer Engine Optimization",
         blurb: "Structured content and schema so assistants quote you when buyers ask.",
         featured: true,
-        metaTitle: "AEO — Answer Engine Optimization Services | Motion 8",
+        metaTitle: "AEO — Answer Engine Optimization Services | Motion 8 Agency",
         metaDescription:
           "Answer engine optimization: structured content, schema and genuine expertise so ChatGPT, Perplexity and AI Overviews cite you when buyers ask.",
         h1: "Be the source the assistant quotes.",
@@ -302,7 +302,7 @@ export const PILLARS: Pillar[] = [
         name: "GEO — Generative Engine Optimization",
         blurb: "Visibility inside AI answers and overviews, measured and iterated like SEO.",
         featured: true,
-        metaTitle: "GEO — Generative Engine Optimization Services | Motion 8",
+        metaTitle: "Generative Engine Optimization (GEO) | Motion 8 Agency",
         metaDescription:
           "Generative engine optimization: earn presence inside AI Overviews and assistant answers, measured and iterated with the same discipline as SEO.",
         h1: "Visibility inside the answer, not just under it.",
@@ -335,7 +335,7 @@ export const PILLARS: Pillar[] = [
         slug: "advanced-analytics",
         name: "Advanced Analytics",
         blurb: "One data model, clean attribution, dashboards leadership actually opens.",
-        metaTitle: "Advanced Marketing Analytics Services | Motion 8",
+        metaTitle: "Advanced Marketing Analytics Services | Motion 8 Agency",
         metaDescription:
           "One data model across product, marketing and sales — clean attribution, server-side tracking and dashboards leadership actually opens.",
         h1: "One number everyone agrees on.",
@@ -368,7 +368,7 @@ export const PILLARS: Pillar[] = [
         slug: "public-relations",
         name: "Public Relations",
         blurb: "Earned coverage and analyst presence tied to the positioning, not vanity hits.",
-        metaTitle: "B2B Public Relations Services | Motion 8",
+        metaTitle: "B2B Public Relations Services | Motion 8 Agency",
         metaDescription:
           "Earned media, analyst relations and executive visibility tied to your positioning and pipeline — not a clipping report of vanity coverage.",
         h1: "Coverage that supports the position you are building.",
@@ -401,7 +401,7 @@ export const PILLARS: Pillar[] = [
         slug: "brand-positioning",
         name: "Brand & Positioning",
         blurb: "The story, the category and the words every other service then repeats.",
-        metaTitle: "Brand & Positioning Strategy | Motion 8",
+        metaTitle: "Brand & Positioning Strategy | Motion 8 Agency",
         metaDescription:
           "Category definition, positioning and messaging architecture — the decisions every campaign, page and sales call downstream then repeats consistently.",
         h1: "Decide what you are before you buy attention for it.",
@@ -438,7 +438,7 @@ export const PILLARS: Pillar[] = [
     name: "Software & Blockchain Development",
     shortName: "Software & Blockchain Dev",
     eyebrow: "Pillar 02 — 11 services",
-    metaTitle: "Software & Blockchain Development Services | Motion 8",
+    metaTitle: "Software & Blockchain Development Services | Motion 8 Agency",
     metaDescription:
       "Custom software, web and mobile apps, MVPs, ecommerce, DevOps and on-chain products — shipped in weeks by the team that planned them.",
     h1: "The product itself, shipped in weeks.",
@@ -474,7 +474,7 @@ export const PILLARS: Pillar[] = [
         slug: "custom-software-development",
         name: "Custom Software Development",
         blurb: "Internal tools and platforms built around how your business actually runs.",
-        metaTitle: "Custom Software Development Services | Motion 8",
+        metaTitle: "Custom Software Development Services | Motion 8 Agency",
         metaDescription:
           "Bespoke platforms and internal tools built around your actual operations — architected for the load you expect, owned by you from the first commit.",
         h1: "Software shaped to the business, not the other way round.",
@@ -507,7 +507,7 @@ export const PILLARS: Pillar[] = [
         slug: "web-mobile-app-development",
         name: "Web & Mobile App Development",
         blurb: "Production web and native apps built to ship, not to demo.",
-        metaTitle: "Web & Mobile App Development | Motion 8",
+        metaTitle: "Web & Mobile App Development | Motion 8 Agency",
         metaDescription:
           "Production web and mobile applications — React, Next.js, React Native and Swift — built for real usage, instrumented, and shipped in two-week increments.",
         h1: "Apps built for production, not for the demo.",
@@ -540,7 +540,7 @@ export const PILLARS: Pillar[] = [
         slug: "mvp-rapid-prototyping",
         name: "MVP & Rapid Prototyping",
         blurb: "The smallest honest version of the product, in front of real users fast.",
-        metaTitle: "MVP Development & Rapid Prototyping | Motion 8",
+        metaTitle: "MVP Development & Rapid Prototyping | Motion 8 Agency",
         metaDescription:
           "Get the smallest honest version of your product in front of real users in weeks — scoped to answer one question, instrumented to actually answer it.",
         h1: "Ship the version that answers the question.",
@@ -573,7 +573,7 @@ export const PILLARS: Pillar[] = [
         slug: "ecommerce-development",
         name: "Ecommerce Development",
         blurb: "Storefronts built for conversion rate and catalogue reality.",
-        metaTitle: "Ecommerce Development Services | Motion 8",
+        metaTitle: "Ecommerce Development Services | Motion 8 Agency",
         metaDescription:
           "Custom and platform ecommerce builds — Shopify Plus, WooCommerce, BigCommerce, Magento and headless — built around conversion rate and real catalogue complexity.",
         h1: "Storefronts that hold up at catalogue scale.",
@@ -606,7 +606,7 @@ export const PILLARS: Pillar[] = [
         slug: "ecommerce-maintenance",
         name: "Ecommerce Maintenance",
         blurb: "Ongoing platform care so peak season is not a gamble.",
-        metaTitle: "Ecommerce Maintenance & Support | Motion 8",
+        metaTitle: "Ecommerce Maintenance & Support | Motion 8 Agency",
         metaDescription:
           "Ongoing ecommerce support — updates, monitoring, performance work and peak-season readiness — so your store stops being a quarterly emergency.",
         h1: "The store still works in November.",
@@ -639,7 +639,7 @@ export const PILLARS: Pillar[] = [
         slug: "custom-plugins-app-development",
         name: "Custom Plugins & App Development",
         blurb: "Extensions and marketplace apps where the platform stops short.",
-        metaTitle: "Custom Plugin & Marketplace App Development | Motion 8",
+        metaTitle: "Custom Plugin & App Development | Motion 8 Agency",
         metaDescription:
           "Custom plugins, extensions and marketplace apps for Shopify, WordPress and WooCommerce — built to platform review standards and maintained past launch.",
         h1: "When the platform stops short of what you need.",
@@ -672,7 +672,7 @@ export const PILLARS: Pillar[] = [
         slug: "ui-ux-design",
         name: "UI/UX Design",
         blurb: "Interface and product design that survives contact with engineering.",
-        metaTitle: "UI/UX Design Services | Motion 8",
+        metaTitle: "UI/UX Design Services | Motion 8 Agency",
         metaDescription:
           "Product and interface design grounded in user research, delivered as a real design system that engineering can build from without reinterpretation.",
         h1: "Design that gets built the way it was drawn.",
@@ -705,7 +705,7 @@ export const PILLARS: Pillar[] = [
         slug: "devops-cloud-services",
         name: "DevOps & Cloud Services",
         blurb: "Pipelines, infrastructure and the monitoring that catches it first.",
-        metaTitle: "DevOps & Cloud Infrastructure Services | Motion 8",
+        metaTitle: "DevOps & Cloud Infrastructure Services | Motion 8 Agency",
         metaDescription:
           "CI/CD pipelines, infrastructure as code, cloud cost control and observability — so deploys stop being events and you hear about incidents before customers do.",
         h1: "Deploys that stop being events.",
@@ -738,7 +738,7 @@ export const PILLARS: Pillar[] = [
         slug: "blockchain-smart-contracts",
         name: "Blockchain & Smart Contracts",
         blurb: "Contracts written to be audited, not just to compile.",
-        metaTitle: "Blockchain & Smart Contract Development | Motion 8",
+        metaTitle: "Blockchain & Smart Contract Development | Motion 8 Agency",
         metaDescription:
           "Smart contract design, development and audit preparation on Ethereum, Solana and L2s — written to be reviewed, tested against adversarial cases, and upgraded safely.",
         h1: "Contracts written to be audited.",
@@ -771,7 +771,7 @@ export const PILLARS: Pillar[] = [
         slug: "web3-development",
         name: "Web3 Development",
         blurb: "On-chain products with an interface ordinary people can use.",
-        metaTitle: "Web3 Product Development Services | Motion 8",
+        metaTitle: "Web3 Product Development Services | Motion 8 Agency",
         metaDescription:
           "Full-stack Web3 products — wallet flows, indexing, dApp front ends and the fiat on-ramps that make on-chain products usable by ordinary customers.",
         h1: "On-chain products people can actually use.",
@@ -804,7 +804,7 @@ export const PILLARS: Pillar[] = [
         slug: "dedicated-teams",
         name: "Dedicated Teams",
         blurb: "An embedded squad that stays long enough to know the codebase.",
-        metaTitle: "Dedicated Development Teams | Motion 8",
+        metaTitle: "Dedicated Development Teams | Motion 8 Agency",
         metaDescription:
           "A dedicated, embedded engineering squad with a named lead — continuity and context instead of a rotating bench of contractors.",
         h1: "The same people, long enough to matter.",
@@ -877,7 +877,7 @@ export const PILLARS: Pillar[] = [
         slug: "ai-agents-chatbots",
         name: "Custom AI Agents & Chatbots",
         blurb: "Assistants grounded in your data, with a human escalation path.",
-        metaTitle: "Custom AI Agents & Chatbot Development | Motion 8",
+        metaTitle: "Custom AI Agents & Chatbot Development | Motion 8 Agency",
         metaDescription:
           "Support and internal AI agents grounded in your own documentation, with tool access, evaluation suites and a human escalation path that actually works.",
         h1: "Assistants that know your business and know when to stop.",
@@ -910,7 +910,7 @@ export const PILLARS: Pillar[] = [
         slug: "workflow-automation",
         name: "Workflow Automation",
         blurb: "The repetitive operational work, running without anyone remembering.",
-        metaTitle: "Business Workflow Automation Services | Motion 8",
+        metaTitle: "Business Workflow Automation Services | Motion 8 Agency",
         metaDescription:
           "Automate the repetitive operational work — document handling, data entry, routing and reporting — with error handling and monitoring built in from the start.",
         h1: "Hours back, every week, quietly.",
@@ -944,7 +944,7 @@ export const PILLARS: Pillar[] = [
         name: "AI Integration into Existing Products",
         blurb: "AI features inside the product you already ship.",
         featured: true,
-        metaTitle: "AI Integration for Existing Products | Motion 8",
+        metaTitle: "AI Integration for Existing Products | Motion 8 Agency",
         metaDescription:
           "Add AI features to the product you already ship — scoped, evaluated and cost-modelled, with graceful degradation when the model is wrong or unavailable.",
         h1: "AI features your users would actually miss.",
@@ -977,7 +977,7 @@ export const PILLARS: Pillar[] = [
         slug: "llm-fine-tuning-rag",
         name: "LLM Fine-Tuning & RAG",
         blurb: "Retrieval and tuning so answers come from your knowledge, with citations.",
-        metaTitle: "LLM Fine-Tuning & RAG Development | Motion 8",
+        metaTitle: "LLM Fine-Tuning & RAG Development | Motion 8 Agency",
         metaDescription:
           "Retrieval-augmented generation and fine-tuning pipelines that ground answers in your own knowledge base, with evaluation and citations built in.",
         h1: "Answers grounded in your knowledge, with receipts.",
@@ -1010,7 +1010,7 @@ export const PILLARS: Pillar[] = [
         slug: "predictive-analytics-ml",
         name: "Predictive Analytics & Custom ML Models",
         blurb: "Forecasting and scoring models that report their own uncertainty.",
-        metaTitle: "Predictive Analytics & Custom ML Models | Motion 8",
+        metaTitle: "Predictive Analytics & Custom ML Models | Motion 8 Agency",
         metaDescription:
           "Churn, demand, lifetime value and scoring models built on your data — deployed with monitoring, honest error bars and drift detection.",
         h1: "Forecasts that admit what they do not know.",
@@ -1043,7 +1043,7 @@ export const PILLARS: Pillar[] = [
         slug: "computer-vision-generative-ai",
         name: "Computer Vision & Generative AI",
         blurb: "Image, video and generative pipelines for real production volume.",
-        metaTitle: "Computer Vision & Generative AI Services | Motion 8",
+        metaTitle: "Computer Vision & Generative AI Services | Motion 8 Agency",
         metaDescription:
           "Detection, classification, OCR and generative image pipelines built for production volume — with human review where the cost of being wrong is high.",
         h1: "Vision and generation at production volume.",
@@ -1099,7 +1099,7 @@ export const PLATFORMS: Platform[] = [
     slug: "shopify-plus",
     name: "Shopify Plus",
     blurb: "Enterprise Shopify builds, checkout extensibility and multi-store operations.",
-    metaTitle: "Shopify Plus Development Agency | Motion 8",
+    metaTitle: "Shopify Plus Development Agency | Motion 8 Agency",
     metaDescription:
       "Shopify Plus development — checkout extensibility, Shopify Functions, B2B, multi-store and headless builds for high-volume merchants.",
     h1: "Shopify Plus, built past the theme editor.",
@@ -1132,7 +1132,7 @@ export const PLATFORMS: Platform[] = [
     slug: "shopify",
     name: "Shopify",
     blurb: "Conversion-focused Shopify storefronts and app integrations.",
-    metaTitle: "Shopify Development Agency | Motion 8",
+    metaTitle: "Shopify Development Agency | Motion 8 Agency",
     metaDescription:
       "Custom Shopify theme development, app integration and performance work — storefronts built around conversion rate rather than template defaults.",
     h1: "Shopify storefronts built around conversion.",
@@ -1165,7 +1165,7 @@ export const PLATFORMS: Platform[] = [
     slug: "wordpress-woocommerce",
     name: "WordPress & WooCommerce",
     blurb: "Content-led commerce where WordPress is the centre of gravity.",
-    metaTitle: "WordPress & WooCommerce Development | Motion 8",
+    metaTitle: "WordPress & WooCommerce Development | Motion 8 Agency",
     metaDescription:
       "WooCommerce and WordPress development — custom themes, blocks and plugins, with the hosting, caching and security work that keeps them fast and safe.",
     h1: "Commerce that lives inside the content.",
@@ -1198,7 +1198,7 @@ export const PLATFORMS: Platform[] = [
     slug: "bigcommerce",
     name: "BigCommerce",
     blurb: "B2B pricing complexity and multi-storefront catalogues.",
-    metaTitle: "BigCommerce Development Agency | Motion 8",
+    metaTitle: "BigCommerce Development Agency | Motion 8 Agency",
     metaDescription:
       "BigCommerce development for complex B2B catalogues — customer-group pricing, quoting, multi-storefront and ERP integration.",
     h1: "Where B2B pricing gets complicated.",
@@ -1231,7 +1231,7 @@ export const PLATFORMS: Platform[] = [
     slug: "magento",
     name: "Magento / Adobe Commerce",
     blurb: "Deep customisation for catalogues that justify the running cost.",
-    metaTitle: "Magento & Adobe Commerce Development | Motion 8",
+    metaTitle: "Magento & Adobe Commerce Development | Motion 8 Agency",
     metaDescription:
       "Magento and Adobe Commerce development — upgrades, performance work, custom module development and honest replatforming advice when it no longer fits.",
     h1: "Magento, maintained properly or migrated honestly.",

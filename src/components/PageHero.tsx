@@ -13,6 +13,7 @@ export function PageHero({
   crumbs,
   eyebrow,
   heading,
+  subheading,
   lede,
   primary = { label: "Start a Project", href: "/contact" },
   secondary = { label: "See our work", href: "/our-work" },
@@ -20,6 +21,8 @@ export function PageHero({
   crumbs: Crumb[];
   eyebrow: string;
   heading: string;
+  /** Optional sub-heading under the H1 (a <p>, not a heading). */
+  subheading?: string;
   lede: string;
   primary?: { label: string; href: string };
   secondary?: { label: string; href: string };
@@ -101,6 +104,15 @@ export function PageHero({
         >
           {heading}
         </SplitReveal>
+
+        {subheading && (
+          <FadeIn
+            as="p"
+            className="m-0 mt-5 max-w-[800px] text-[clamp(18px,2.2vw,26px)] leading-[1.35] tracking-[-0.015em] text-dark-muted"
+          >
+            {subheading}
+          </FadeIn>
+        )}
 
         <div className="mt-9 flex flex-col items-start justify-between gap-8 md:flex-row md:items-end md:gap-16">
           <FadeIn as="p" className="m-0 max-w-[520px] text-[15px] leading-[1.8] text-dark-muted">

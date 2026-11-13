@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { SITE } from "@/content/site";
+import { SITE, SOCIALS } from "@/content/site";
+import { PILLARS } from "@/content/pillars";
 
 export const absolute = (path: string) =>
   path === "/" ? SITE.url : `${SITE.url}${path.startsWith("/") ? path : `/${path}`}`;
@@ -91,46 +92,51 @@ export function buildMetadata({
 
 type Json = Record<string, unknown>;
 
-export const organizationSchema = (): Json => ({
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": `${SITE.url}/#organization`,
-  name: SITE.name,
-  legalName: SITE.name,
-  url: SITE.url,
-  email: SITE.email,
-  description: SITE.description,
-  foundingDate: SITE.founded,
-  logo: {
-    "@type": "ImageObject",
-    url: absolute("/brand/icon.png"),
-    caption: `${SITE.name} Logo`,
-  },
-  image: absolute("/og-image.png"),
-  contactPoint: [
-    {
-      "@type": "ContactPoint",
-      email: SITE.email,
-      contactType: "customer service",
-      availableLanguage: ["English"],
-    },
-  ],
-  areaServed: SITE.areaServed,
-  knowsAbout: [
+const ORG_ID = `${SITE.url}/#organization`;
+const WEBSITE_ID = `${SITE.url}/#website`;
+
+const uniq = (items: string[]) => Array.from(new Set(items));
+
+export const organizationSchema = (): Json => {
+  const sameAs = SOCIALS.map((s) => s.href.trim()).filter(Boolean);
+  const knowsAbout = uniq([
     "Growth infrastructure",
-    "Digital marketing",
-    "Search engine optimization (SEO)",
-    "Answer engine optimization (AEO)",
-    "Generative engine optimization (GEO)",
-    "Conversion rate optimization (CRO)",
-    "Custom software development",
-    "Blockchain & smart contracts",
-    "Web3 development",
-    "Artificial intelligence & LLMs",
-    "AI agents & workflow automation",
-  ],
-  sameAs: [],
-});
+    ...PILLARS.map((p) => p.name),
+    ...PILLARS.flatMap((p) => p.services.map((s) => s.name)),
+  ]);
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": ORG_ID,
+    name: SITE.name,
+    alternateName: ["Motion8", "Motion 8", "Motion8 Agency", "motion8agency"],
+    legalName: SITE.name,
+    url: SITE.url,
+    email: SITE.email,
+    description: SITE.description,
+    slogan: SITE.tagline,
+    foundingDate: SITE.founded,
+    logo: {
+      "@type": "ImageObject",
+      "@id": `${SITE.url}/#logo`,
+      url: absolute("/brand/icon.png"),
+      contentUrl: absolute("/brand/icon.png"),
+      caption: `${SITE.name} Logo`,
+    },
+    image: absolute("/og-image.png"),
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        email: SITE.email,
+        contactType: "customer service",
+        availableLanguage: ["English"],
+      },
+    ],
+    areaServed: SITE.areaServed,
+    knowsAbout,
+    ...(sameAs.length ? { sameAs } : {}),
+  };
+};
 
 export const websiteSchema = (): Json => ({
   "@context": "https://schema.org",
@@ -139,7 +145,8 @@ export const websiteSchema = (): Json => ({
   url: SITE.url,
   name: SITE.name,
   description: SITE.description,
-  publisher: { "@id": `${SITE.url}/#organization` },
+  inLanguage: "en",
+  publisher: { "@id": ORG_ID },
 });
 
 export const breadcrumbSchema = (trail: { name: string; path: string }[]): Json => ({
@@ -169,21 +176,28 @@ export const serviceSchema = ({
   description,
   path,
   category,
+  audience,
+  offers,
 }: {
   name: string;
   description: string;
   path: string;
   category: string;
+  audience?: string;
+  offers?: Json;
 }): Json => ({
   "@context": "https://schema.org",
   "@type": "Service",
+  "@id": `${absolute(path)}#service`,
   name,
   description,
   serviceType: name,
   category,
   url: absolute(path),
-  provider: { "@id": `${SITE.url}/#organization` },
+  provider: { "@id": ORG_ID },
   areaServed: SITE.areaServed,
+  ...(audience ? { audience: { "@type": "Audience", audienceType: audience } } : {}),
+  ...(offers ? { offers } : {}),
 });
 
 export const articleSchema = ({
@@ -193,6 +207,8 @@ export const articleSchema = ({
   published,
   updated,
   section,
+  author,
+  image,
 }: {
   title: string;
   description: string;
@@ -200,25 +216,45 @@ export const articleSchema = ({
   published: string;
   updated?: string;
   section: string;
+  author?: { name: string; url?: string; jobTitle?: string };
+  image?: string;
 }): Json => ({
   "@context": "https://schema.org",
   "@type": "BlogPosting",
+  "@id": `${absolute(path)}#article`,
   headline: title,
   description,
   url: absolute(path),
   mainEntityOfPage: { "@type": "WebPage", "@id": absolute(path) },
+  isPartOf: { "@id": WEBSITE_ID },
   datePublished: published,
   dateModified: updated ?? published,
   articleSection: section,
-  author: { "@id": `${SITE.url}/#organization` },
-  publisher: { "@id": `${SITE.url}/#organization` },
-  image: absolute("/og-image.png"),
+  inLanguage: "en",
+  author: author?.name
+    ? {
+        "@type": "Person",
+        name: author.name,
+        ...(author.url ? { url: author.url.startsWith("http") ? author.url : absolute(author.url) } : {}),
+        ...(author.jobTitle ? { jobTitle: author.jobTitle } : {}),
+        worksFor: { "@id": ORG_ID },
+      }
+    : { "@id": ORG_ID },
+  publisher: { "@id": ORG_ID },
+  image: absolute(image ?? "/og-image.png"),
 });
 
-/** Serialised for a single <script> per page carrying an @graph. */
+/** Serialised for a single <script> per page carrying an @graph. "<" is
+ *  escaped so no string value can close the script tag. */
 export const graph = (schemas: Json[]) =>
   JSON.stringify(
     schemas.length === 1
       ? schemas[0]
-      : { "@context": "https://schema.org", "@graph": schemas },
-  );
+      : {
+          "@context": "https://schema.org",
+          "@graph": schemas.map(({ "@context": _ctx, ...node }) => node),
+        },
+  )
+    .replace(/</g, "\\u003c")
+    .replace(/\u2028/g, "\\u2028")
+    .replace(/\u2029/g, "\\u2029");

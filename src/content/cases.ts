@@ -47,7 +47,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     tone: "ink",
     summary:
       "Plenty of leads, almost no pipeline. The fix was a measurement model everyone trusted, then rebuilding the channel mix on top of it.",
-    metaTitle: "Case Study — B2B SaaS Demand Engine | Motion 8",
+    metaTitle: "Case Study — B2B SaaS Demand Engine | Motion 8 Agency",
     metaDescription:
       "How Motion 8 rebuilt a Series A SaaS demand engine around pipeline instead of raw lead volume: measurement first, then channels.",
     challenge: [
@@ -98,7 +98,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     tone: "terracotta",
     summary:
       "The prototype proved demand and then started failing under it. Rebuilding the load-bearing parts without stopping the roadmap.",
-    metaTitle: "Case Study — Marketplace MVP to Production | Motion 8",
+    metaTitle: "Case Study — Marketplace MVP to Production | Motion 8 Agency",
     metaDescription:
       "How Motion 8 took a proven marketplace prototype to production: rebuilding what carries money and data without pausing the roadmap.",
     challenge: [
@@ -149,7 +149,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     tone: "light",
     summary:
       "Ticket volume grew faster than headcount. The constraint was not answering questions — it was knowing when to stop and hand over.",
-    metaTitle: "Case Study — Support Automation with Escalation | Motion 8",
+    metaTitle: "Case Study: AI Support Automation | Motion 8 Agency",
     metaDescription:
       "How Motion 8 grounded a support agent in real documentation, wired it to order systems, and designed the human escalation path properly.",
     challenge: [
