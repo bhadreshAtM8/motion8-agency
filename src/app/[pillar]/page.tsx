@@ -34,6 +34,29 @@ const H2 = "mt-3 text-[clamp(26px,4vw,38px)] tracking-[-0.025em]";
 const EYEBROW_LIGHT = `${EYEBROW} text-terracotta-dark`;
 const SECTION = "gutter scroll-mt-36 py-16 md:py-24";
 
+/* Words that make a keyword H1 longer without saying more. */
+const FILLER = new Set([
+  "services", "service", "agency", "company", "development", "for", "into", "the", "of", "a", "and",
+]);
+
+/** Meaningful words: lowercase, punctuation and "(ABBR)" dropped, plurals folded. */
+function words(text: string) {
+  return text
+    .toLowerCase()
+    .replace(/\([^)]*\)/g, " ")
+    .replace(/[^a-z0-9 ]+/g, " ")
+    .split(/\s+/)
+    .filter((w) => w && !FILLER.has(w))
+    .map((w) => (w.length > 3 && w.endsWith("s") ? w.slice(0, -1) : w));
+}
+
+/** True when the keyword H1 names something the card title does not
+    ("SEO & Content Strategy Services" under "SEO & Content Strategy" does not). */
+function addsInformation(keyword: string, title: string) {
+  const inTitle = new Set(words(title));
+  return words(keyword).some((w) => !inTitle.has(w));
+}
+
 type Params = { params: Promise<{ pillar: string }> };
 
 /* Only the three pillars exist; anything else is a real 404, not an on-demand render. */
@@ -179,7 +202,7 @@ export default async function PillarPage({ params }: Params) {
                     <h3 className="relative mt-6 text-[21px] font-extrabold leading-[1.25] tracking-[-0.02em] transition-colors group-hover:text-terracotta-dark">
                       {service.name}
                     </h3>
-                    {keyword && keyword !== service.name && (
+                    {keyword && addsInformation(keyword, service.name) && (
                       <p className="relative m-0 mt-2 text-[12.5px] font-bold leading-[1.5] text-terracotta-dark">
                         {keyword}
                       </p>

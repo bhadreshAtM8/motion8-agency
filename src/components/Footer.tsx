@@ -61,7 +61,7 @@ export function Footer() {
   return (
     <footer ref={root} className="relative overflow-hidden bg-ground pt-16 text-white md:pt-20">
       <div className="gutter relative flex flex-col items-center text-center">
-        <Link href="/" aria-label={`${SITE.name} — home`} className="flex items-center gap-[9px]">
+        <Link href="/" aria-label={`${SITE.name} — home`} className="flex min-h-11 items-center gap-[9px]">
           <Image src="/brand/icon.png" alt="" width={350} height={350} className="h-8 w-8" />
           <span className="text-[19px] font-extrabold tracking-[-0.02em]">{SITE.name}</span>
         </Link>
@@ -100,7 +100,7 @@ export function Footer() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="w-fit max-w-full break-words py-1.5 text-[13px] text-dark-muted transition-colors duration-300 hover:text-white"
+                  className="inline-flex min-h-11 w-fit max-w-full items-center break-words text-[13px] md:min-h-0 md:py-1.5 text-dark-muted transition-colors duration-300 hover:text-white"
                 >
                   {item.label}
                 </Link>
@@ -115,7 +115,7 @@ export function Footer() {
           </span>
           <a
             href={`mailto:${SITE.email}`}
-            className="inline-block py-2 transition-colors hover:text-terracotta-light"
+            className="inline-flex min-h-11 items-center transition-colors hover:text-terracotta-light"
           >
             {SITE.email}
           </a>
