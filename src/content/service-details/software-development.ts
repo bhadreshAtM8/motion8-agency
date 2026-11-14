@@ -71,7 +71,7 @@ export const SOFTWARE_DEVELOPMENT_DETAILS: ServiceDetailMap = {
     engagement:
       "Discovery is fixed-price. Delivery is usually a monthly squad rate; where a genuinely fixed scope exists, such as a defined integration or a migration, we quote it fixed. You own the code from the first commit.",
     relatedCases: ["marketplace-mvp-to-production"],
-    relatedPosts: [],
+    relatedPosts: ["mvp-development-cost", "hire-dedicated-development-team"],
   },
 
   "software-development/web-mobile-app-development": {
@@ -216,7 +216,7 @@ export const SOFTWARE_DEVELOPMENT_DETAILS: ServiceDetailMap = {
     engagement:
       "Six to ten weeks for most MVPs, with a firm date set at the end of discovery. Discovery is fixed-price, and you own the code from the first commit.",
     relatedCases: ["marketplace-mvp-to-production"],
-    relatedPosts: [],
+    relatedPosts: ["mvp-development-cost"],
   },
 
   "software-development/ecommerce-development": {
@@ -294,7 +294,7 @@ export const SOFTWARE_DEVELOPMENT_DETAILS: ServiceDetailMap = {
     engagement:
       "Discovery is fixed-price. Migrations and defined integrations with a genuinely fixed scope are quoted fixed; open-ended builds usually run at a monthly squad rate.",
     relatedCases: ["marketplace-mvp-to-production"],
-    relatedPosts: ["product-led-seo"],
+    relatedPosts: ["shopify-plus-migration-checklist", "product-led-seo"],
   },
 
   "software-development/ecommerce-maintenance": {
@@ -375,7 +375,7 @@ export const SOFTWARE_DEVELOPMENT_DETAILS: ServiceDetailMap = {
     engagement:
       "A retainer covers scheduled updates, monitoring, bug fixes within agreed response times, and a block of hours for small improvements; larger feature work is quoted separately. There are monthly and ad hoc plans. Checkout-down is treated as a same-hour incident during business hours, and out-of-hours cover is available.",
     relatedCases: [],
-    relatedPosts: [],
+    relatedPosts: ["shopify-plus-migration-checklist"],
   },
 
   "software-development/custom-plugins-app-development": {
@@ -825,6 +825,6 @@ export const SOFTWARE_DEVELOPMENT_DETAILS: ServiceDetailMap = {
     engagement:
       "Three-month minimum, because ramp-up costs make anything shorter bad value for both sides; most engagements run considerably longer. The team scales up or down on a notice period agreed in advance, and time-zone overlap is agreed in the contract.",
     relatedCases: ["marketplace-mvp-to-production"],
-    relatedPosts: [],
+    relatedPosts: ["hire-dedicated-development-team"],
   },
 };

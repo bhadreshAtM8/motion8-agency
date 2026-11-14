@@ -1,3 +1,10 @@
+import { post as p_get_cited_by_chatgpt_perplexity } from "./drafts/get-cited-by-chatgpt-perplexity";
+import { post as p_rag_vs_fine_tuning } from "./drafts/rag-vs-fine-tuning";
+import { post as p_ai_customer_support_agent_build_vs_buy } from "./drafts/ai-customer-support-agent-build-vs-buy";
+import { post as p_mvp_development_cost } from "./drafts/mvp-development-cost";
+import { post as p_hire_dedicated_development_team } from "./drafts/hire-dedicated-development-team";
+import { post as p_shopify_plus_migration_checklist } from "./drafts/shopify-plus-migration-checklist";
+
 export type Post = {
   slug: string;
   title: string;
@@ -16,6 +23,7 @@ export type Post = {
 };
 
 export const POSTS: Post[] = [
+  p_get_cited_by_chatgpt_perplexity, p_rag_vs_fine_tuning, p_ai_customer_support_agent_build_vs_buy, p_mvp_development_cost, p_hire_dedicated_development_team, p_shopify_plus_migration_checklist,
   {
     slug: "aeo-vs-geo-vs-seo",
     title: "AEO vs GEO vs SEO: what actually changes",

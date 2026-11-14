@@ -156,7 +156,7 @@ export const DIGITAL_MARKETING_DETAILS: ServiceDetailMap = {
       "Looker Studio",
     ],
     relatedCases: ["b2b-saas-demand-engine"],
-    relatedPosts: ["product-led-seo", "aeo-vs-geo-vs-seo"],
+    relatedPosts: ["get-cited-by-chatgpt-perplexity", "product-led-seo", "aeo-vs-geo-vs-seo"],
   },
 
   "digital-marketing/marketing-automation-email": {
@@ -458,7 +458,7 @@ export const DIGITAL_MARKETING_DETAILS: ServiceDetailMap = {
       "Google AI Overviews",
     ],
     relatedCases: ["b2b-saas-demand-engine"],
-    relatedPosts: ["aeo-vs-geo-vs-seo"],
+    relatedPosts: ["get-cited-by-chatgpt-perplexity", "aeo-vs-geo-vs-seo"],
   },
 
   "digital-marketing/geo-generative-engine-optimization": {
@@ -533,7 +533,7 @@ export const DIGITAL_MARKETING_DETAILS: ServiceDetailMap = {
       "Semrush",
     ],
     relatedCases: [],
-    relatedPosts: ["aeo-vs-geo-vs-seo"],
+    relatedPosts: ["get-cited-by-chatgpt-perplexity", "aeo-vs-geo-vs-seo"],
   },
 
   "digital-marketing/advanced-analytics": {

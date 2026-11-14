@@ -77,7 +77,7 @@ export const AI_AUTOMATION_DETAILS: ServiceDetailMap = {
     engagement:
       "A focused single-use-case agent typically ships in 3–6 weeks; multi-tool agents integrating several systems usually run 6–10 weeks. You get a fixed project quote after the discovery call, with model API usage scaling with volume, and post-launch tuning is available on a monthly retainer.",
     relatedCases: ["support-automation-with-escalation"],
-    relatedPosts: [],
+    relatedPosts: ["ai-customer-support-agent-build-vs-buy", "rag-vs-fine-tuning"],
   },
 
   "ai-automation/workflow-automation": {
@@ -235,7 +235,7 @@ export const AI_AUTOMATION_DETAILS: ServiceDetailMap = {
     engagement:
       "A single, well-scoped feature typically ships in 3–6 weeks from audit to staged rollout. You get a fixed-scope quote before any build work starts, plus a separate estimate of ongoing model API costs.",
     relatedCases: ["support-automation-with-escalation"],
-    relatedPosts: [],
+    relatedPosts: ["rag-vs-fine-tuning"],
   },
 
   "ai-automation/llm-fine-tuning-rag": {
@@ -314,7 +314,7 @@ export const AI_AUTOMATION_DETAILS: ServiceDetailMap = {
     engagement:
       "A focused RAG pipeline over a well-defined data source usually ships in 3–5 weeks; fine-tuning, messier sources or tighter evaluation requirements extend that to 6–10 weeks. Scoped and quoted after discovery, once we have seen your data.",
     relatedCases: ["support-automation-with-escalation"],
-    relatedPosts: [],
+    relatedPosts: ["rag-vs-fine-tuning"],
   },
 
   "ai-automation/predictive-analytics-ml": {
