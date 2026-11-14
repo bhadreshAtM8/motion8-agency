@@ -101,7 +101,81 @@ html.no-js [data-faq-body] {
   visibility: visible !important;
 }
 
+/* Intro loader: CSS-only and capped at 0.6s from first paint, so it can
+   never hold the page hostage while JS loads. The boot script adds
+   .skip-intro for repeat visits in the session and for paid traffic
+   (utm_* / gclid / fbclid); without JS or with reduced motion it never shows. */
+@keyframes loader-out {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes loader-brand {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  45%,
+  70% {
+    opacity: 1;
+    transform: none;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+}
+@keyframes loader-wipe {
+  to {
+    transform: scaleY(0);
+  }
+}
+[data-loader] {
+  animation: loader-out 0.14s linear 0.46s both;
+}
+[data-loader] [data-loader-brand] {
+  animation: loader-brand 0.56s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+[data-loader] [data-loader-fill] {
+  transform-origin: bottom;
+  animation: loader-wipe 0.34s cubic-bezier(0.7, 0, 0.3, 1) 0.2s both;
+}
+html.no-js [data-loader],
+html.reduced-motion [data-loader],
+html.skip-intro [data-loader] {
+  display: none;
+}
+
+/* Home hero: when the loader plays, the CSS rise waits for it to lift so the
+   entrance is seen. The text is still painted (opacity .01) under the loader. */
+.home-hero {
+  --intro: 0s;
+}
+html:not(.skip-intro) .home-hero {
+  --intro: 0.4s;
+}
+.home-hero .hero-rise {
+  animation-delay: var(--intro);
+}
+.home-hero .rise-2 {
+  animation-delay: calc(var(--intro) + 0.06s);
+}
+.home-hero .rise-3 {
+  animation-delay: calc(var(--intro) + 0.12s);
+}
+.home-hero .rise-4 {
+  animation-delay: calc(var(--intro) + 0.2s);
+}
+.home-hero .rise-5 {
+  animation-delay: calc(var(--intro) + 0.3s);
+}
+
 @media (prefers-reduced-motion: reduce) {
+  [data-loader] {
+    display: none;
+  }
+
   *,
   *::before,
   *::after {

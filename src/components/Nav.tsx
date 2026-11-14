@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import { MagneticButton } from "@/components/MagneticButton";
 import { NAV, SITE } from "@/content/site";
 import { gsap, ScrollTrigger, useGSAP, prefersReducedMotion } from "@/lib/gsap";
-import { onIntroDone } from "@/lib/intro";
+import { isIntroDone, onIntroDone } from "@/lib/intro";
 
 /**
  * Fixed and transparent over the C2 hero, pre-filled on subpages. Compacts
@@ -33,7 +33,7 @@ export function Nav({ solid = false }: { solid?: boolean }) {
       }
 
       let stop = () => {};
-      if (!solid) {
+      if (!solid && !isIntroDone()) {
         gsap.set(el, { opacity: 0, y: -24 });
         stop = onIntroDone(() =>
           gsap.to(el, { opacity: 1, y: 0, duration: 0.8, ease: "expo.out" }),

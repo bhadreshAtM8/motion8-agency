@@ -99,7 +99,8 @@ export const metadata: Metadata = {
 /* Runs before paint so animated content is never stranded invisible when JS
    is off or the visitor asked for reduced motion. */
 const BOOT = `document.documentElement.classList.remove('no-js');
-if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('reduced-motion')}`;
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('reduced-motion')}
+try{if(sessionStorage.getItem('m8:intro')==='1'||/[?&](utm_[a-z_]+|gclid|fbclid)=/i.test(location.search)){document.documentElement.classList.add('skip-intro')}}catch(e){}`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

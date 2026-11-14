@@ -78,12 +78,12 @@ export function PillarStrip() {
       <div className="flex flex-col justify-center overflow-hidden py-16 lg:sticky lg:top-0 lg:h-screen lg:max-h-[840px] lg:py-0">
         <div className="gutter flex flex-col gap-6 pb-10 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <div className="text-[11.5px] font-extrabold uppercase tracking-[.16em] text-terracotta">
+            <div className="text-[11.5px] font-extrabold uppercase tracking-[.16em] text-terracotta-dark">
               What we run
             </div>
             <SplitReveal
               as="h2"
-              className="mt-3 text-[clamp(28px,4vw,38px)] tracking-[-0.025em]"
+              className="mt-3 text-[clamp(26px,4vw,38px)] tracking-[-0.025em]"
             >
               Three pillars, one system
             </SplitReveal>
@@ -91,7 +91,7 @@ export function PillarStrip() {
           <div className="hidden items-center gap-3.5 pb-2 lg:flex">
             <span
               data-counter
-              className="text-[12px] font-extrabold tracking-[.14em] text-terracotta"
+              className="text-[12px] font-extrabold tracking-[.14em] text-terracotta-dark"
             >
               01 / 03
             </span>
@@ -135,7 +135,7 @@ export function PillarStrip() {
                 <div className="relative flex items-baseline justify-between">
                   <span
                     className={`text-[12px] font-extrabold tracking-[.14em] ${
-                      dark ? "text-terracotta-light" : "text-terracotta"
+                      dark ? "text-terracotta-light" : "text-terracotta-dark"
                     }`}
                   >
                     PILLAR {pillar.index}
@@ -172,7 +172,7 @@ export function PillarStrip() {
                             ? "text-blue"
                             : dark
                               ? "text-terracotta-light"
-                              : "text-terracotta"
+                              : "text-terracotta-dark"
                         }`}
                       >
                         {String(pillar.services.indexOf(service) + 1).padStart(2, "0")}
@@ -184,7 +184,7 @@ export function PillarStrip() {
 
                 <Link
                   href={`/${pillar.slug}`}
-                  className={`relative mt-5 inline-block py-2 text-[13px] font-bold ${
+                  className={`relative mt-4 inline-flex min-h-11 items-center text-[13px] font-bold ${
                     dark ? "text-terracotta-light" : "text-blue"
                   }`}
                 >

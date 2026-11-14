@@ -28,14 +28,6 @@ export function Hero() {
       gsap.set(eyebrowLine, { scaleX: 0, transformOrigin: "left center" });
       const stop = onIntroDone(() => {
         gsap.to(eyebrowLine, { scaleX: 1, duration: 0.7, ease: "expo.out" });
-        gsap.from(el.querySelectorAll("[data-curtain]"), {
-          yPercent: 12,
-          opacity: 0,
-          duration: 0.9,
-          stagger: 0.07,
-          ease: "expo.out",
-          delay: 0.5,
-        });
       });
 
       // Background glows drift against the scroll.
@@ -100,7 +92,7 @@ export function Hero() {
   );
 
   return (
-    <section ref={root} className="relative overflow-hidden bg-ground">
+    <section ref={root} className="home-hero relative overflow-hidden bg-ground">
       {/* decor */}
       <div aria-hidden className="decor-grid pointer-events-none absolute inset-0" />
       <div
@@ -143,14 +135,14 @@ export function Hero() {
       <div className="gutter relative pt-[130px] md:pt-[190px]">
         <div className="flex items-center gap-3 text-[11.5px] font-extrabold uppercase tracking-[.16em] text-terracotta-light">
           <span data-eyebrow-line aria-hidden className="block h-px w-11 bg-terracotta-light" />
-          <SplitReveal as="span" intro>
+          <SplitReveal as="span" eager className="inline-block">
             {HERO.eyebrow}
           </SplitReveal>
         </div>
 
         <h1 className="mt-7 max-w-[1180px] text-[clamp(38px,6.4vw,92px)] font-extrabold leading-[.95] tracking-[-0.04em] text-white">
           {HERO.lines.map((line, i) => (
-            <SplitReveal as="span" intro key={i} className="block">
+            <SplitReveal as="span" eager key={i} className={`block rise-${i + 1}`}>
               {line.map((part, j) => (
                 <span key={j} className={part.accent ? "text-terracotta-light" : undefined}>
                   {part.text}
@@ -161,10 +153,10 @@ export function Hero() {
         </h1>
 
         <div className="mt-10 flex flex-col items-start justify-between gap-8 pb-11 md:flex-row md:items-end md:gap-16">
-          <FadeIn as="p" intro className="m-0 max-w-[460px] text-[15px] leading-[1.8] text-dark-muted">
+          <FadeIn as="p" eager className="rise-4 m-0 max-w-[460px] text-[15px] leading-[1.8] text-dark-muted">
             {HERO.lede}
           </FadeIn>
-          <FadeIn intro delay={0.1} className="flex flex-wrap gap-3.5">
+          <FadeIn eager className="rise-4 flex flex-wrap gap-3.5">
             <MagneticButton href={HERO.primaryCta.href} variant="primary">
               {HERO.primaryCta.label}
             </MagneticButton>
@@ -176,7 +168,7 @@ export function Hero() {
 
         {/* Curtain row — the full interaction needs width, so small screens get
             a plain stacked index instead. */}
-        <div className="hidden border-r border-t border-[rgba(240,233,223,.14)] lg:flex">
+        <div className="hero-rise rise-5 hidden border-r border-t border-[rgba(240,233,223,.14)] lg:flex">
           {CURTAINS.map((panel) => (
             <Link
               key={panel.num}
@@ -221,7 +213,7 @@ export function Hero() {
           ))}
         </div>
 
-        <div className="border-t border-[rgba(240,233,223,.14)] lg:hidden">
+        <div className="hero-rise rise-5 border-t border-[rgba(240,233,223,.14)] lg:hidden">
           {CURTAINS.map((panel) => (
             <Link
               key={panel.num}

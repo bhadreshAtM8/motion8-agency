@@ -24,6 +24,9 @@ import {
 
 type Params = { params: Promise<{ slug: string }> };
 
+// Only slugs from generateStaticParams exist; anything else 404s without rendering.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return PLATFORMS.map((platform) => ({ slug: platform.slug }));
 }

@@ -12,6 +12,8 @@ import { articleSchema, breadcrumbSchema, buildMetadata, faqSchema } from "@/lib
 
 type Params = { params: Promise<{ slug: string }> };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return POSTS.map((post) => ({ slug: post.slug }));
 }

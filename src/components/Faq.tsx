@@ -134,7 +134,7 @@ export function FaqSection({
 
               <a
                 href={`mailto:${SITE.email}`}
-                className="mt-3 block py-2 text-center text-[12.5px] text-dark-muted transition-colors hover:text-terracotta-light"
+                className="mt-3 flex min-h-11 items-center justify-center text-center text-[12.5px] text-dark-muted transition-colors hover:text-terracotta-light"
               >
                 {SITE.email}
               </a>

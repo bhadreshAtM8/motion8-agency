@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { CaseStack } from "@/components/home/CaseStack";
 import { Differentiators } from "@/components/home/Differentiators";
 import { Hero } from "@/components/home/Hero";
+import { LatestWriting } from "@/components/home/LatestWriting";
 import { PillarStrip } from "@/components/home/PillarStrip";
 import { PlatformStrip } from "@/components/home/PlatformStrip";
 import { Ticker } from "@/components/home/Ticker";
@@ -11,6 +12,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Loader } from "@/components/Loader";
 import { Nav } from "@/components/Nav";
 import { Process } from "@/components/Process";
+import { MidCta } from "@/components/service/MidCta";
 import { StatBand } from "@/components/StatBand";
 import { Testimonials } from "@/components/Testimonials";
 import { CTA_BAND, HOME_FAQS, PROCESS, SITE, STATS } from "@/content/site";
@@ -35,7 +37,17 @@ export default function HomePage() {
         <Ticker />
         <PillarStrip />
 
-        <section className="gutter border-t border-edge-rule bg-ground py-16 md:py-20">
+        <div className="gutter bg-cream pb-16 md:pb-24">
+          <MidCta
+            className="mt-0"
+            text="Know which pillar you need, or need all three? Tell us what you're building and get a first read within 24 hours."
+          />
+        </div>
+
+        <section
+          aria-label="Motion 8 in numbers"
+          className="gutter bg-ground py-16 md:py-24"
+        >
           <StatBand stats={STATS} />
         </section>
 
@@ -44,6 +56,7 @@ export default function HomePage() {
         <CaseStack />
         <Testimonials />
         <Differentiators />
+        <LatestWriting />
         <FaqSection faqs={HOME_FAQS} />
         <CtaBand
           heading={CTA_BAND.heading}

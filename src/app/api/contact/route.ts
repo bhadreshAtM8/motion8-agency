@@ -8,23 +8,49 @@ const FAIL_MESSAGE = `We couldn't send that just now. Please email us at ${SITE.
 
 /* Best-effort in-memory throttle. Resets on deploy and isn't shared across
    instances — it slows down casual abuse, it is not a security boundary. */
-const hits = new Map<string, { count: number; first: number }>();
-const WINDOW_MS = 60_000;
-const MAX_PER_WINDOW = 5;
+type Bucket = Map<string, { count: number; first: number }>;
 
-function rateLimited(ip: string) {
+/* Two fixed-window buckets: per client IP (slows a single sender) and per
+   submitted email address (stops rotating IPs from flooding one inbox). */
+const ipHits: Bucket = new Map();
+const IP_WINDOW_MS = 60_000;
+const IP_MAX = 5;
+
+const emailHits: Bucket = new Map();
+const EMAIL_WINDOW_MS = 10 * 60_000;
+const EMAIL_MAX = 3;
+
+const MAX_KEYS = 5_000;
+
+function limited(bucket: Bucket, key: string, windowMs: number, max: number) {
   const now = Date.now();
-  if (hits.size > 5_000) {
-    for (const [key, record] of hits) if (now - record.first > WINDOW_MS) hits.delete(key);
+  if (bucket.size > MAX_KEYS) {
+    for (const [k, record] of bucket) if (now - record.first > windowMs) bucket.delete(k);
+    // Still over the cap (sustained flood of unique keys): drop oldest entries.
+    // Maps iterate in insertion order, so the first keys are the oldest windows.
+    for (const k of bucket.keys()) {
+      if (bucket.size <= MAX_KEYS) break;
+      bucket.delete(k);
+    }
   }
-  const record = hits.get(ip);
-  if (!record || now - record.first > WINDOW_MS) {
-    hits.set(ip, { count: 1, first: now });
+  const record = bucket.get(key);
+  if (!record || now - record.first > windowMs) {
+    bucket.delete(key);
+    bucket.set(key, { count: 1, first: now });
     return false;
   }
   record.count += 1;
-  return record.count > MAX_PER_WINDOW;
+  return record.count > max;
 }
+
+const TOO_MANY = (when: string) =>
+  NextResponse.json(
+    {
+      ok: false,
+      error: `Thanks — we've already received a few messages from you. Please try again ${when}, or email us at ${SITE.email}.`,
+    },
+    { status: 429 },
+  );
 
 /** Coerce an unknown field to a trimmed string capped at `max` chars. */
 function field(value: unknown, max = 200) {
@@ -38,12 +64,7 @@ export async function POST(request: Request) {
     request.headers.get("x-forwarded-for")?.split(",").pop()?.trim() ??
     "unknown";
 
-  if (rateLimited(ip)) {
-    return NextResponse.json(
-      { ok: false, error: "Too many submissions. Try again in a minute." },
-      { status: 429 },
-    );
-  }
+  if (limited(ipHits, ip, IP_WINDOW_MS, IP_MAX)) return TOO_MANY("in a minute");
 
   let body: Record<string, unknown>;
   try {
@@ -73,6 +94,11 @@ export async function POST(request: Request) {
 
   if (Object.keys(errors).length) {
     return NextResponse.json({ ok: false, errors }, { status: 422 });
+  }
+
+  // Per-recipient cap, checked only once the address is valid so typos don't burn quota.
+  if (limited(emailHits, email.toLowerCase(), EMAIL_WINDOW_MS, EMAIL_MAX)) {
+    return TOO_MANY("in a few minutes");
   }
 
   const lead = { name, email, company, socialOrWebsite, budget, message };

@@ -77,13 +77,13 @@ export function PlatformStrip() {
   return (
     <section
       ref={root}
-      className="relative overflow-hidden border-t border-edge-rule bg-ground py-16 md:py-20"
+      className="relative overflow-hidden border-t border-edge-rule bg-ground py-16 md:py-24"
     >
-      <div data-head className="gutter js-anim mb-10 flex flex-col gap-3 md:mb-12">
+      <div data-head className="gutter js-anim mb-10 flex flex-col md:mb-12">
         <div className="text-[11.5px] font-extrabold uppercase tracking-[.16em] text-terracotta-light">
           The stack
         </div>
-        <h2 className="max-w-[640px] text-[clamp(22px,3.2vw,30px)] leading-[1.25] tracking-[-0.025em] text-white">
+        <h2 className="mt-3 max-w-[720px] text-[clamp(26px,4vw,38px)] leading-[1.2] tracking-[-0.025em] text-white">
           Built on the platforms you already run on
         </h2>
       </div>

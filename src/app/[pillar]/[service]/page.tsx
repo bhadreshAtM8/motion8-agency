@@ -85,6 +85,8 @@ function truncate(text: string, max = 300) {
 
 type Params = { params: Promise<{ pillar: string; service: string }> };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return ALL_SERVICE_PATHS;
 }

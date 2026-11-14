@@ -27,6 +27,27 @@ export function onIntroDone(fn: () => void) {
   };
 }
 
+export function isIntroDone() {
+  return done;
+}
+
+/**
+ * True when the loader must not play: the boot script already flagged the
+ * visit (repeat in session, paid traffic, reduced motion, no JS), or the
+ * loader is mounting long after first paint (a client-side navigation back
+ * to /, or a hydration so slow the CSS overlay has already lifted).
+ */
+export function shouldSkipIntro() {
+  if (typeof window === "undefined") return false;
+  const html = document.documentElement.classList;
+  return (
+    html.contains("skip-intro") ||
+    html.contains("reduced-motion") ||
+    introAlreadyPlayed() ||
+    performance.now() > 1200
+  );
+}
+
 export function introAlreadyPlayed() {
   if (typeof window === "undefined") return false;
   try {

@@ -12,6 +12,9 @@ import { breadcrumbSchema, buildMetadata } from "@/lib/seo";
 
 type Params = { params: Promise<{ slug: string }> };
 
+// Only slugs from generateStaticParams exist; anything else 404s without rendering.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return CASE_STUDIES.map((study) => ({ slug: study.slug }));
 }

@@ -24,7 +24,7 @@ const TONES = {
   },
   light: {
     shell: "border border-edge-card bg-white text-light-body shadow-caseLight",
-    label: "text-terracotta",
+    label: "text-terracotta-dark",
     meta: "text-light-muted",
     body: "text-light-muted",
     spot: "rgba(195,72,17,.12),transparent 70%",
@@ -62,7 +62,7 @@ export function CaseStack() {
   return (
     <section id="work" className="bg-cream text-light-body">
       <div className="gutter pb-10 pt-16 md:pt-24">
-        <div className="text-[11.5px] font-extrabold uppercase tracking-[.16em] text-terracotta">
+        <div className="text-[11.5px] font-extrabold uppercase tracking-[.16em] text-terracotta-dark">
           Proof
         </div>
         <SplitReveal as="h2" className="mt-3 text-[clamp(26px,4vw,38px)] tracking-[-0.025em]">
@@ -93,9 +93,9 @@ export function CaseStack() {
                 <span className={`text-[12.5px] ${tone.meta}`}>{study.pillar}</span>
               </div>
               <div className="relative mt-16">
-                <div className="text-[clamp(24px,3.6vw,38px)] font-extrabold leading-[1.15] tracking-[-0.025em]">
+                <h3 className="m-0 text-[clamp(24px,3.6vw,38px)] font-extrabold leading-[1.15] tracking-[-0.025em]">
                   {study.title}
-                </div>
+                </h3>
                 <div className={`mt-3 max-w-[560px] text-[14px] leading-[1.7] ${tone.body}`}>
                   {study.summary}
                 </div>

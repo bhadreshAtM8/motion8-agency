@@ -32,6 +32,8 @@ export type CaseStudy = {
   measures: string[];
   /** Real internal links to the services involved. */
   services: { name: string; href: string }[];
+  /** Optional YYYY-MM-DD of the last material edit; the sitemap falls back to SITE_CONTENT_UPDATED. */
+  updated?: string;
 };
 
 export const CASE_STUDIES: CaseStudy[] = [
