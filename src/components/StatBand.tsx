@@ -27,7 +27,8 @@ export function StatBand({
       const el = root.current;
       if (!el) return;
 
-      gsap.set(el.querySelectorAll(".js-anim"), { visibility: "visible" });
+      // The root itself carries .js-anim, so reveal it as well as any children.
+      gsap.set([el, ...el.querySelectorAll(".js-anim")], { visibility: "visible" });
       if (prefersReducedMotion()) return;
 
       el.querySelectorAll<HTMLElement>("[data-stat]").forEach((cell) => {
