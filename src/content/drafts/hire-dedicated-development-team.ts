@@ -57,7 +57,7 @@ export const post: Post = {
         "Put ownership in the contract before onboarding: who owns the code and IP, confidentiality through an NDA, and a requirement that repositories, credentials and deployments sit in your own organisation from day one. If the vendor controls the accounts, you depend on its goodwill however the contract reads.",
         "Have your counsel check that the ownership terms cover code, designs and documentation, and every person who works on the product, subcontractors included, not only the people named in the proposal.",
         "Admin access is the practical test. If a vendor holds the only admin rights to your source control or cloud account, it can hold the product hostage, whether it means to or not.",
-        "With Motion 8 Agency, you own the code and IP as set out in the contract, repositories sit in your organisation from day one, and an NDA is available. Whichever partner you choose, those are reasonable terms to ask for.",
+        "With Motion 8 Agency, you own the code and IP from the first commit, repositories sit in your organisation from day one, and an NDA is available. Whichever partner you choose, those are reasonable terms to ask for.",
       ],
     },
     {

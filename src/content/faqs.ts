@@ -970,7 +970,7 @@ export const FAQ_SETS: Record<string, Faq[]> = {
     },
     {
       "question": "Who owns the IP and the code once the MVP is built?",
-      "answer": "You do, fully — every line of code, design asset, and piece of documentation transfers to you on final payment, with no licensing strings attached. This is written into every contract before work starts, not negotiated after the fact. You get admin access to every repo and service from day one, not just at handoff."
+      "answer": "You do, fully, from the first commit — every line of code, design asset, and piece of documentation is yours, with no licensing strings attached. Repositories sit in your organisation from day one. This is written into every contract before work starts, not negotiated after the fact. You get admin access to every repo and service from day one, not just at handoff."
     },
     {
       "question": "Do you help validate the idea, or do you just build what we tell you?",
@@ -1226,7 +1226,7 @@ export const FAQ_SETS: Record<string, Faq[]> = {
     },
     {
       "question": "Who owns the design files once the project wraps?",
-      "answer": "You do. Every Figma file, component library, and asset we produce transfers to your team on final payment, with no licensing restrictions on future use."
+      "answer": "You do. Every Figma file, component library, and asset we produce is yours from the moment it's created, with no licensing restrictions on future use."
     },
     {
       "question": "Why choose Motion 8 over a freelance designer or design agency?",

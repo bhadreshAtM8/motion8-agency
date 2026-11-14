@@ -86,7 +86,7 @@ export const post: Post = {
         "Ask the questions that reveal how a team handles scope, ownership and risk, because those decide the final cost more than the rate card does.",
         "Who exactly will build it, and will the same people stay through launch? What do you think our riskiest assumption is? A good team pushes back on scope rather than simply pricing whatever it is handed.",
         "How are change requests handled? Look for an explicit process where changes are priced and scheduled, and for weekly demos of working software.",
-        "Who owns the code and IP? The answer should be you, set out in the contract, with repositories in your own organisation from day one and an NDA available if you need one.",
+        "Who owns the code and IP? The answer should be you, from the first commit and in writing, with repositories in your own organisation from day one and an NDA available if you need one.",
         "Which parts will be disposable, and what happens after launch? Expect written keep, refactor or replace notes, documentation, and a clear choice between handover and a support retainer. If you plan to raise again, ask whether the codebase would stand up to technical due diligence: clean version history, documented architecture decisions, no hardcoded secrets.",
       ],
     },
