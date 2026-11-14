@@ -177,6 +177,26 @@ export const SOCIALS: { label: string; href: string }[] = [
   { label: "YouTube", href: "" },
 ];
 
+/** Leadership shown on /about and emitted as Person schema (founder/member). */
+export const TEAM: {
+  name: string;
+  role: string;
+  linkedin: string;
+  founder?: boolean;
+}[] = [
+  {
+    name: "Vansh Modi",
+    role: "Founder",
+    linkedin: "https://www.linkedin.com/in/vansh-modi-motion8/",
+    founder: true,
+  },
+  {
+    name: "James deCrescenzo",
+    role: "Partner and Consultant",
+    linkedin: "https://www.linkedin.com/in/jamesdjr/",
+  },
+];
+
 export const FOOTER_COLUMNS: { label: string; href: string }[][] = [
   [
     { label: "Home", href: "/" },

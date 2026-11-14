@@ -81,8 +81,6 @@ export const metadata: Metadata = {
     title: `${SITE.name} | ${SITE.tagline}`,
     description: SITE.description,
     images: [absolute("/og-image.png")],
-    creator: "@motion8agency",
-    site: "@motion8agency",
   },
   robots: {
     index: true,

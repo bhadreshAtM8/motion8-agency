@@ -6,8 +6,9 @@ import { Nav } from "@/components/Nav";
 import { PageHero } from "@/components/PageHero";
 import { Process } from "@/components/Process";
 import { StatBand } from "@/components/StatBand";
-import { CTA_BAND, PROCESS, SITE, STATS } from "@/content/site";
-import { breadcrumbSchema, buildMetadata, organizationSchema } from "@/lib/seo";
+import { TOTAL_SERVICES } from "@/content/pillars";
+import { CTA_BAND, PROCESS, SITE, STATS, TEAM } from "@/content/site";
+import { breadcrumbSchema, buildMetadata, organizationSchema, teamSchemas } from "@/lib/seo";
 
 const crumbs = [
   { name: "Home", path: "/" },
@@ -15,16 +16,15 @@ const crumbs = [
 ];
 
 export const metadata = buildMetadata({
-  title: "About Motion 8 | One Accountable Team",
-  description:
-    "Motion 8 runs product, systems and demand as one accountable team across India, the USA and the UAE — 30 people, 26 services, three pillars.",
+  title: "About Motion 8 Agency | One Accountable Team",
+  description: `Motion 8 Agency, founded by Vansh Modi in ${SITE.founded}, runs product, systems and demand as one accountable team across the USA, the UAE and India.`,
   path: "/about",
 });
 
 export default function AboutPage() {
   return (
     <>
-      <JsonLd schemas={[breadcrumbSchema(crumbs), organizationSchema()]} />
+      <JsonLd schemas={[breadcrumbSchema(crumbs), organizationSchema(), ...teamSchemas()]} />
       <Nav solid />
 
       <main id="main">
@@ -65,11 +65,57 @@ export default function AboutPage() {
                 stop drifting apart.
               </p>
               <p className="m-0">
-                Today that is roughly 30 people across {SITE.offices}, running 26 services in three
+                Today that is roughly 30 people across {SITE.offices}, running {TOTAL_SERVICES} services in three
                 pillars for companies at every stage and size — from a pre-seed MVP to an
                 enterprise replatform.
               </p>
             </div>
+          </div>
+        </section>
+
+
+        <section
+          id="leadership"
+          aria-labelledby="leadership-heading"
+          className="gutter bg-stone py-16 text-light-body md:py-24"
+        >
+          <div className="grid gap-12 md:grid-cols-[380px_1fr] md:gap-14">
+            <div>
+              <div className="text-[11.5px] font-extrabold uppercase tracking-[.16em] text-terracotta-dark">
+                Leadership
+              </div>
+              <h2
+                id="leadership-heading"
+                className="mt-3 text-[clamp(26px,4vw,38px)] tracking-[-0.025em]"
+              >
+                The people accountable for your outcome
+              </h2>
+            </div>
+            <ul className="m-0 grid list-none gap-4 p-0 sm:grid-cols-2">
+              {TEAM.map((member) => (
+                <li
+                  key={member.name}
+                  className="flex flex-col justify-between gap-8 rounded-card border border-edge-card bg-white p-7 md:p-8"
+                >
+                  <div>
+                    <h3 className="m-0 text-[22px] font-extrabold tracking-[-0.02em] text-light-body">
+                      {member.name}
+                    </h3>
+                    <p className="m-0 mt-1.5 text-[15px] text-light-muted">{member.role}</p>
+                  </div>
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-11 items-center gap-2 self-start text-[14px] font-bold text-terracotta-dark transition-colors hover:text-terracotta"
+                  >
+                    LinkedIn profile
+                    <span aria-hidden>→</span>
+                    <span className="sr-only">for {member.name} (opens in a new tab)</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 

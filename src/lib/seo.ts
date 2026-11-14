@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SITE, SOCIALS } from "@/content/site";
+import { SITE, SOCIALS, TEAM } from "@/content/site";
 import { PILLARS } from "@/content/pillars";
 
 export const absolute = (path: string) =>
@@ -96,6 +96,22 @@ const WEBSITE_ID = `${SITE.url}/#website`;
 
 const uniq = (items: string[]) => Array.from(new Set(items));
 
+const personId = (name: string) =>
+  `${SITE.url}/about#${name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+
+/** Person nodes for the leadership team, linked to the Organization. */
+export const teamSchemas = (): Json[] =>
+  TEAM.map((m) => ({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": personId(m.name),
+    name: m.name,
+    jobTitle: m.role,
+    url: `${SITE.url}/about`,
+    sameAs: [m.linkedin],
+    worksFor: { "@id": ORG_ID },
+  }));
+
 export const organizationSchema = (): Json => {
   const sameAs = SOCIALS.map((s) => s.href.trim()).filter(Boolean);
   const knowsAbout = uniq([
@@ -133,6 +149,8 @@ export const organizationSchema = (): Json => {
     ],
     areaServed: SITE.areaServed,
     knowsAbout,
+    founder: TEAM.filter((m) => m.founder).map((m) => ({ "@id": personId(m.name) })),
+    member: TEAM.filter((m) => !m.founder).map((m) => ({ "@id": personId(m.name) })),
     ...(sameAs.length ? { sameAs } : {}),
   };
 };
