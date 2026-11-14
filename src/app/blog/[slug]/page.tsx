@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Nav } from "@/components/Nav";
 import { PageHero } from "@/components/PageHero";
 import { getPost, POSTS } from "@/content/posts";
-import { CTA_BAND } from "@/content/site";
+import { CTA_BAND, TEAM } from "@/content/site";
 import { articleSchema, breadcrumbSchema, buildMetadata, faqSchema } from "@/lib/seo";
 
 type Params = { params: Promise<{ slug: string }> };
@@ -46,6 +46,7 @@ export default async function PostPage({ params }: Params) {
     { name: post.title, path },
   ];
   const others = POSTS.filter((item) => item.slug !== post.slug);
+  const author = TEAM.find((m) => m.founder) ?? TEAM[0];
 
   return (
     <>
@@ -59,6 +60,7 @@ export default async function PostPage({ params }: Params) {
             published: post.published,
             updated: post.updated,
             section: post.category,
+            author: { name: author.name, url: author.linkedin, jobTitle: author.role },
           }),
           faqSchema(post.faqs),
         ]}
@@ -78,7 +80,16 @@ export default async function PostPage({ params }: Params) {
         <article className="gutter bg-ground pb-16 md:pb-24">
           <div className="max-w-[720px]">
             <p className="m-0 border-t border-edge-rule pt-6 text-[12px] uppercase tracking-[.14em] text-dark-faint">
-              Published {formatDate(post.published)}
+              By{" "}
+              <a
+                href={author.linkedin}
+                target="_blank"
+                rel="author noopener noreferrer"
+                className="text-dark-muted underline-offset-4 transition-colors hover:text-terracotta-light hover:underline"
+              >
+                {author.name}
+              </a>
+              , {author.role} · Published {formatDate(post.published)}
               {post.updated && ` · Updated ${formatDate(post.updated)}`}
             </p>
 

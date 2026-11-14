@@ -131,6 +131,7 @@ export const organizationSchema = (): Json => {
     description: SITE.description,
     slogan: SITE.tagline,
     foundingDate: SITE.founded,
+    numberOfEmployees: { "@type": "QuantitativeValue", value: 25 },
     logo: {
       "@type": "ImageObject",
       "@id": `${SITE.url}/#logo`,

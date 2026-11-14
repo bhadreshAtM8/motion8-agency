@@ -94,7 +94,7 @@ export const TICKER = [
 
 export const STATS = [
   { value: "2024", label: "Founded", countTo: 2024, countFrom: 2000 },
-  { value: "30", label: "Team members", countTo: 30 },
+  { value: "25", label: "Team members", countTo: 25 },
   {
     value: String(TOTAL_SERVICES),
     label: `Services, ${TOTAL_PILLARS} pillars`,

@@ -65,7 +65,7 @@ export default function AboutPage() {
                 stop drifting apart.
               </p>
               <p className="m-0">
-                Today that is roughly 30 people across {SITE.offices}, running {TOTAL_SERVICES} services in three
+                Today that is 25 people across multiple departments, based in the USA and India, running {TOTAL_SERVICES} services in three
                 pillars for companies at every stage and size — from a pre-seed MVP to an
                 enterprise replatform.
               </p>
