@@ -171,8 +171,8 @@ export const CTA_BAND = {
  * should also go into `sameAs` in the Organization schema.
  */
 export const SOCIALS: { label: string; href: string }[] = [
-  { label: "LinkedIn", href: "" },
-  { label: "Instagram", href: "" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/motion-8-agency/" },
+  { label: "Instagram", href: "https://www.instagram.com/motion8.agency/" },
   { label: "X", href: "" },
   { label: "YouTube", href: "" },
 ];
