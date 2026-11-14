@@ -6,12 +6,15 @@ import { gsap, prefersReducedMotion, useGSAP } from "@/lib/gsap";
 /**
  * Decorative, looping hero visual per pillar.
  *
- * The SVG markup is the finished frame, so it reads correctly with no JS and
- * under prefers-reduced-motion. GSAP only takes over after hydration, and the
- * loop is paused whenever the motif is off-screen or the tab is hidden.
+ * The SVG markup is the finished frame, which is what no-JS and
+ * prefers-reduced-motion visitors see (the global `.js-anim` rules force it
+ * visible for them). With motion on it stays hidden until the timeline is
+ * built at its first frame, so the finished frame never flashes before the
+ * loop starts. The loop pauses whenever the motif is off-screen or the tab is
+ * hidden.
  */
 
-const GROUND = "#14110f";
+const GROUND = "#1b130d"; // tailwind `ground`
 const TERRA = "#c34811";
 const TERRA_LIGHT = "#e4642a";
 const CREAM = "#f5efe6";
@@ -202,7 +205,7 @@ const SEGMENTS = CODE.flatMap((line, row) =>
   })),
 );
 
-const TYPE_SPEED = 250; // px per second
+const TYPE_SPEED = 140; // px per second
 const RULE = { x: 62, y: 275, w: 200 };
 const CHECK = { cx: 294, cy: 276, r: 11 };
 
@@ -337,8 +340,8 @@ function buildEditor(q: Selector) {
   t += 0.55;
 
   // hold on the finished build, then clear
-  tl.to(live, { opacity: 0, duration: 0.5, ease: "power1.in" }, t + 1.6);
-  tl.add(() => {}, t + 2.3);
+  tl.to(live, { opacity: 0, duration: 0.5, ease: "power1.in" }, t + 3);
+  tl.add(() => {}, t + 3.7);
   return tl;
 }
 
@@ -481,9 +484,16 @@ export function PillarMotif({ pillar }: { pillar: string }) {
   useGSAP(
     () => {
       const el = root.current;
-      if (!el || !motif || prefersReducedMotion()) return;
+      if (!el || !motif) return;
+      const svg = el.querySelector("svg");
+      if (prefersReducedMotion()) {
+        gsap.set(svg, { visibility: "visible" });
+        return;
+      }
 
       const tl = motif.build(gsap.utils.selector(el) as Selector);
+      tl.progress(0.0001).progress(0); // render the opening frame before reveal
+      gsap.set(svg, { visibility: "visible" });
 
       let inView = typeof IntersectionObserver === "undefined";
       const sync = () => {
@@ -527,7 +537,7 @@ export function PillarMotif({ pillar }: { pillar: string }) {
         viewBox="0 0 360 360"
         fill="none"
         focusable="false"
-        className="block h-full w-full overflow-visible"
+        className="js-anim block h-full w-full overflow-visible"
       >
         <Art />
       </svg>

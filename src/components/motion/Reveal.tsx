@@ -21,6 +21,7 @@ export function SplitReveal({
   children,
   className = "",
   intro = false,
+  eager = false,
   stagger = 0.028,
   duration = 0.9,
   distance = 115,
@@ -29,6 +30,9 @@ export function SplitReveal({
   children: ReactNode;
   className?: string;
   intro?: boolean;
+  /** Above-the-fold text: visible in the first paint (CSS rise), never
+      gated on hydration — keeps the LCP element off the JS critical path. */
+  eager?: boolean;
   stagger?: number;
   duration?: number;
   distance?: number;
@@ -38,7 +42,7 @@ export function SplitReveal({
   useGSAP(
     () => {
       const el = ref.current;
-      if (!el) return;
+      if (!el || eager) return;
 
       if (prefersReducedMotion()) {
         gsap.set(el, { visibility: "visible" });
@@ -56,6 +60,11 @@ export function SplitReveal({
 
         gsap.set(el, { visibility: "visible" });
         split = SplitText.create(el, { type: "words", mask: "words" });
+        // Word masks clip at the line box; give descenders room without
+        // changing the heading's height.
+        if (split.masks?.length) {
+          gsap.set(split.masks, { paddingBottom: "0.18em", marginBottom: "-0.18em" });
+        }
         gsap.set(split.words, { yPercent: distance });
 
         const play = () => {
@@ -95,7 +104,7 @@ export function SplitReveal({
 
   return createElement(
     as,
-    { ref, className: `js-anim ${className}` },
+    { ref, className: `${eager ? "hero-rise" : "js-anim"} ${className}` },
     children,
   );
 }
@@ -108,6 +117,7 @@ export function FadeIn({
   y = 24,
   delay = 0,
   intro = false,
+  eager = false,
   start = "top 92%",
 }: {
   as?: Tag;
@@ -116,6 +126,7 @@ export function FadeIn({
   y?: number;
   delay?: number;
   intro?: boolean;
+  eager?: boolean;
   start?: string;
 }) {
   const ref = useRef<HTMLElement>(null);
@@ -123,7 +134,7 @@ export function FadeIn({
   useGSAP(
     () => {
       const el = ref.current;
-      if (!el) return;
+      if (!el || eager) return;
 
       if (prefersReducedMotion()) {
         gsap.set(el, { visibility: "visible", opacity: 1, y: 0 });
@@ -153,7 +164,11 @@ export function FadeIn({
 
   return createElement(
     as,
-    { ref, className: `js-anim ${className}` },
+    {
+      ref,
+      className: `${eager ? "hero-rise" : "js-anim"} ${className}`,
+      style: eager && delay ? { animationDelay: `${delay}s` } : undefined,
+    },
     children,
   );
 }

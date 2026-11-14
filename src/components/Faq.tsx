@@ -39,7 +39,7 @@ export function FaqSection({
   panelBody?: string;
 }) {
   const root = useRef<HTMLElement>(null);
-  const [openSet, setOpenSet] = useState<ReadonlySet<number>>(() => new Set([0]));
+  const [openSet, setOpenSet] = useState<ReadonlySet<number>>(() => new Set());
   const stone = tone === "stone";
 
   useGSAP(
@@ -98,7 +98,7 @@ export function FaqSection({
     <section
       ref={root}
       id={id}
-      className={`gutter py-16 md:py-24 ${id ? "scroll-mt-28 " : ""}${
+      className={`gutter py-16 md:py-24 ${id ? "scroll-mt-36 " : ""}${
         stone ? "bg-stone text-light-body" : "bg-ground"
       }`}
     >
@@ -113,7 +113,7 @@ export function FaqSection({
         </SplitReveal>
 
         {/* Dark contact panel: above the list on small screens, sticky rail on lg */}
-        <aside data-panel className="js-anim lg:sticky lg:top-32 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:self-start">
+        <aside data-panel className="js-anim order-last lg:order-none lg:sticky lg:top-32 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:self-start">
           <div className="relative overflow-hidden rounded-card border border-[rgba(240,233,223,.14)] bg-ground p-7 md:p-8">
             <Spotlight size="300px" stops="rgba(228,100,42,.2),transparent 70%" />
 

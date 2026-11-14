@@ -33,7 +33,7 @@ const H2 = "mt-3 text-[clamp(26px,4vw,38px)] tracking-[-0.025em]";
 /* Light surfaces take the darker terracotta so 11.5px text clears AA. */
 const EYEBROW_LIGHT = `${EYEBROW} text-terracotta-dark`;
 const EYEBROW_DARK = `${EYEBROW} text-terracotta-light`;
-const SECTION = "gutter scroll-mt-28 py-16 md:py-24";
+const SECTION = "gutter scroll-mt-36 py-16 md:py-24";
 
 /** Mid-page prompt: a sentence, the primary CTA and a quieter link. Not a heading. */
 function MidCta({ text, dark = false }: { text: string; dark?: boolean }) {
@@ -270,7 +270,7 @@ export default async function ServicePage({ params }: Params) {
             <Reveal
               as="section"
               id="deliverables"
-              className="gutter scroll-mt-28 bg-cream pb-16 text-light-body md:pb-24"
+              className="gutter scroll-mt-36 bg-cream pb-16 text-light-body md:pb-24"
             >
               <div className={EYEBROW_LIGHT}>Deliverables</div>
               <SplitReveal as="h2" className={H2}>
@@ -291,7 +291,7 @@ export default async function ServicePage({ params }: Params) {
                       <span
                         aria-hidden
                         data-count={i + 1}
-                        className="text-[28px] font-extrabold tabular-nums leading-none tracking-[-0.03em] text-terracotta/30 md:text-[34px]"
+                        className="text-[28px] font-extrabold tabular-nums leading-none tracking-[-0.03em] text-terracotta/60 md:text-[34px]"
                       >
                         {String(i + 1).padStart(2, "0")}
                       </span>
@@ -363,7 +363,7 @@ export default async function ServicePage({ params }: Params) {
             {/* Timeline */}
             <section id="timeline" className={`${SECTION} bg-ground text-dark-body`}>
               <div className="grid gap-10 lg:grid-cols-[380px_1fr] lg:gap-14">
-                <div>
+                <div className="lg:sticky lg:top-36 lg:self-start">
                   <div className={EYEBROW_DARK}>Timeline</div>
                   <SplitReveal as="h2" className={`${H2} text-white`}>
                     How an engagement runs
@@ -471,7 +471,7 @@ export default async function ServicePage({ params }: Params) {
 
         {/* Pages with a per-service timeline already show how we work. */}
         {!detail && (
-          <div id="process" className="scroll-mt-28">
+          <div id="process" className="scroll-mt-36">
             <Process
               eyebrow="How we work"
               heading="Audit, structure, publish, track"
@@ -486,12 +486,12 @@ export default async function ServicePage({ params }: Params) {
           className={`${SECTION} bg-ground ${detail ? "" : "border-t border-edge-nav"}`}
         >
           <h2 className={EYEBROW_DARK}>More in {pillar.shortName}</h2>
-          <div className="mt-8 grid gap-x-10 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 gap-x-10 sm:columns-2 lg:columns-3">
             {siblings.map((sibling) => (
               <Link
                 key={sibling.slug}
                 href={`/${pillar.slug}/${sibling.slug}`}
-                className="group grid grid-cols-[1fr_auto] items-center gap-4 border-t border-edge-rule py-5 transition-colors hover:border-terracotta-light"
+                className="group grid break-inside-avoid grid-cols-[1fr_auto] items-center gap-4 border-t border-edge-rule py-5 transition-colors hover:border-terracotta-light"
               >
                 <span className="text-[15px] font-bold text-dark-body transition-colors group-hover:text-terracotta-light">
                   {sibling.name}

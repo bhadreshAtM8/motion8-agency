@@ -161,7 +161,7 @@ export function Nav({ solid = false }: { solid?: boolean }) {
             <MagneticButton
               href="/contact"
               variant="navOutline"
-              className="max-sm:!px-4 max-sm:!py-[9px] max-sm:!text-[12px]"
+              className="min-h-11 max-sm:!px-4 max-sm:!py-[9px] max-sm:!text-[12px]"
             >
               Start<span className="sr-only sm:not-sr-only"> a Project</span>
             </MagneticButton>

@@ -72,7 +72,7 @@ export function PageHero({
       {motif ? (
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-y-0 right-0 hidden w-[46%] md:block"
+          className="pointer-events-none absolute inset-y-0 right-0 hidden w-[46%] items-start justify-end pr-[var(--gutter)] pt-[96px] xl:flex"
         >
           {motif}
         </div>
@@ -116,27 +116,33 @@ export function PageHero({
         </div>
 
         <SplitReveal
+          eager
           as="h1"
           intro={false}
-          className="mt-7 max-w-[1000px] text-[clamp(34px,5.4vw,78px)] leading-[.98] tracking-[-0.04em] text-white"
+          className={`mt-7 max-w-[1000px] pb-[0.08em] text-[clamp(34px,5.4vw,78px)] leading-[.98] tracking-[-0.04em] text-white ${
+            motif ? "xl:max-w-[min(1000px,calc(100%-420px))]" : ""
+          }`}
         >
           {heading}
         </SplitReveal>
 
         {subheading && (
           <FadeIn
+            eager
             as="p"
-            className="m-0 mt-5 max-w-[800px] text-[clamp(18px,2.2vw,26px)] leading-[1.35] tracking-[-0.015em] text-dark-muted"
+            className={`m-0 mt-5 max-w-[800px] text-[clamp(18px,2.2vw,26px)] leading-[1.35] tracking-[-0.015em] text-dark-muted ${
+              motif ? "xl:max-w-[min(800px,calc(100%-420px))]" : ""
+            }`}
           >
             {subheading}
           </FadeIn>
         )}
 
         <div className="mt-9 flex flex-col items-start justify-between gap-8 md:flex-row md:items-end md:gap-16">
-          <FadeIn as="p" className="m-0 max-w-[520px] text-[15px] leading-[1.8] text-dark-muted">
+          <FadeIn eager as="p" className="m-0 max-w-[520px] text-[15px] leading-[1.8] text-dark-muted">
             {lede}
           </FadeIn>
-          <FadeIn delay={0.08} className="flex shrink-0 flex-wrap gap-3.5">
+          <FadeIn eager delay={0.08} className="flex shrink-0 flex-wrap gap-3.5">
             <MagneticButton href={primary.href} variant="primary">
               {primary.label}
             </MagneticButton>

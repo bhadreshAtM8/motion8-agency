@@ -74,6 +74,21 @@ h3 {
   visibility: hidden;
 }
 
+/* Above-the-fold hero text: painted immediately, animated by CSS only. */
+@keyframes hero-rise {
+  from {
+    opacity: 0.01;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.hero-rise {
+  animation: hero-rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
 html.no-js .js-anim,
 html.reduced-motion .js-anim {
   visibility: visible !important;
