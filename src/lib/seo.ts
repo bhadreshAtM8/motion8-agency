@@ -84,8 +84,7 @@ export function buildMetadata({
       title,
       description,
       images: [imageUrl],
-      creator: "@motion8agency",
-      site: "@motion8agency",
+      /* No X account yet — add `site`/`creator` handles once one exists. */
     },
   };
 }
