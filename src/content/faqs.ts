@@ -598,7 +598,7 @@ export const FAQ_SETS: Record<string, Faq[]> = {
     },
     {
       "question": "How long until we see our startup cited by AI engines?",
-      "answer": "Early signals like schema indexing and first AI-tool mentions often appear within four to eight weeks, since generative engines can pick up well-structured content faster than traditional search ever did. Durable, consistent citation across multiple engines and query variations typically builds over two to four months of sustained content and entity work."
+      "answer": "There’s no guaranteed timeline, because AI engines decide what to cite. The first step is getting your pages indexed by Bing and Google, which those engines draw on; after that, citations tend to build over several months of consistent content, entity and third-party mention work. We track a fixed set of prompts monthly so you can see the trend rather than guess."
     },
     {
       "question": "Is GEO a one-time project or ongoing?",
@@ -610,7 +610,7 @@ export const FAQ_SETS: Record<string, Faq[]> = {
     },
     {
       "question": "What is llms.txt and do we actually need one?",
-      "answer": "llms.txt is an emerging standard, a plain-text file at your site root that gives AI crawlers a clean, prioritized map of your most important content. It's not a magic switch, but for a startup wanting to be efficiently understood by LLMs it's a low-cost, high-signal piece of a broader GEO setup, and we implement it as part of our technical foundation work."
+      "answer": "llms.txt is an emerging standard, a plain-text file at your site root that gives AI crawlers a clean, prioritized map of your most important content. It’s cheap to add and we include it in our technical foundation work, but treat it as optional: adoption by AI companies is uneven and Google has said it doesn’t use llms.txt for Search. Indexing, clear page structure and third-party mentions matter far more."
     },
     {
       "question": "What schema markup do you implement, and does it touch our codebase?",
@@ -1868,7 +1868,7 @@ export const FAQ_SETS: Record<string, Faq[]> = {
     },
     {
       "question": "Can you customize the checkout experience?",
-      "answer": "Yes — Plus gives us full checkout.liquid or Checkout Extensibility access to add custom fields, upsells, dynamic shipping rules, and branded post-purchase flows. We build checkout customizations that lift conversion and AOV without breaking Shopify's PCI-compliant, battle-tested payment core."
+      "answer": "Yes — on Plus we use Checkout Extensibility (checkout UI extensions and Shopify Functions), which replaced checkout.liquid, to add custom fields, upsells, discount and shipping logic, and branded thank-you and post-purchase flows. We build checkout customizations that lift conversion and AOV without breaking Shopify's PCI-compliant, battle-tested payment core."
     },
     {
       "question": "Do you build B2B and wholesale storefronts on Shopify Plus?",
@@ -1892,11 +1892,11 @@ export const FAQ_SETS: Record<string, Faq[]> = {
     },
     {
       "question": "What can you automate with Shopify Flow and scripts?",
-      "answer": "Plenty — fraud flagging, tagging and segmentation, inventory alerts, VIP order routing, and post-purchase workflows can all run on Shopify Flow without custom code. For anything Flow can't handle, we write custom scripts and Functions so your ops team stops doing manual, repetitive work order by order."
+      "answer": "Plenty — fraud flagging, tagging and segmentation, inventory alerts, VIP order routing, and post-purchase workflows can all run on Shopify Flow without custom code. For logic Flow can’t handle, we build Shopify Functions (which replaced Shopify Scripts) or a small custom app, so your ops team stops doing manual, repetitive work order by order."
     },
     {
       "question": "How secure is Shopify Plus under real compliance scrutiny?",
-      "answer": "Shopify Plus is PCI DSS Level 1 certified out of the box, with enterprise-grade DDoS protection, automated fraud analysis, and 99.99% uptime SLA — the kind of infrastructure diligence investors and enterprise partners expect. We layer on staff permission structures and audit logging so security holds up under real scrutiny, not just a checklist."
+      "answer": "Shopify’s platform is PCI DSS Level 1 compliant, with DDoS protection and built-in fraud analysis handled on Shopify’s hosted infrastructure — the baseline investors and enterprise partners expect. We layer on staff permission structures and audit logging so security holds up under real scrutiny, not just a checklist."
     },
     {
       "question": "What level of support do we get after launch?",
